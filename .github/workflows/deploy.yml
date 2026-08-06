@@ -86,16 +86,21 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-
+      
       - name: Install JS deps 📦
         run: npm ci
+
+      - name: Check config
+        run: |
+          grep baseurl _config.yml
+          grep url _config.yml
 
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
-          bundle exec jekyll build --baseurl "/shunsuketakano_cv.github.io"
+          bundle exec jekyll build
           
       - name: Check build output
         run: |
