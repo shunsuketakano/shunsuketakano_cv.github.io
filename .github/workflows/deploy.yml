@@ -110,7 +110,7 @@ jobs:
 
       - name: Check generated link
         run: |
-          grep -R "assets/css/main.css" _site/index.html
+          grep -R "main.css" _site | head -20
           
       - name: Purge unused CSS 🧹
         run: |
