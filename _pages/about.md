@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='http://asahi-lab.jp/English.html'>JSPS Research Fellow</a>, Postdoctoral Researcher of Hiroshima University WPI-SKCM²
+subtitle: JSPS Research Fellow (Waseda University), Postdoctoral Researcher (WPI-SKCM², Hiroshima University) 
 
 profile:
   align: right
