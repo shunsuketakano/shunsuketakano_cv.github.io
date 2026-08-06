@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='http://asahi-lab.jp/English.html'>Asahi Laboratory at Waseda University</a>. Center for Advanced Biomedical Sciences (TWIns) #02C213,2-2 Wakamatsu-cho, Shinjuku, Tokyo, 162-8480 Japan.
 
 profile:
   align: right
