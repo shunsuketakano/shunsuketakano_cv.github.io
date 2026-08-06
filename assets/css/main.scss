@@ -1,8 +1,18 @@
 ---
-# このハイフン3つは最新のJekyllで必須の設定です（消さないでください）
 ---
 
-// 裏側のデザインを日本語フォントで上書きします
-body, html, p, h1, h2, h3, h4, h5, h6, span, a, li {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans CJK JP", sans-serif !important;
+:root {
+  --font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK JP",
+    sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
 }
