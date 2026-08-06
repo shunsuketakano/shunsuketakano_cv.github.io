@@ -22,7 +22,8 @@ profiles:
     content: about_einstein.md
     image_circular: false # crops the image to make it circular
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+      <p>Laboratory of Bio-Solid State Science (Asahi Lab.）</p>
+      <p>Center for Advanced Biomedical Sciences (TWIns), Waseda University</p>
+      <p>2-2 Wakamatsu-cho, Shinjuku,</p>
+      <p>Tokyo, 162-8480 Japan</p>
 ---
