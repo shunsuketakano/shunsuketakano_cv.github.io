@@ -11,5 +11,9 @@ orcid_id: 0009-0002-9428-4851
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
   logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-  title: Custom Social
-  url: https://orcid.org/0009-0002-9428-4851
+  title: Asahi Lab.
+  url: http://asahi-lab.jp/eng_member/student/2022/eng_takano.html
+custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
+  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
+  title: WPI-SKCM²
+  url: https://wpi-skcm2.hiroshima-u.ac.jp/people/shunsuke-takano/
