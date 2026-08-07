@@ -78,7 +78,7 @@ jobs:
 
       - name: Check CSL styles
         run: |
-        bundle exec ruby -e 'require "csl/styles"; puts CSL::Style.all.map(&:id).grep(/physics|american/)'
+          bundle exec ruby -e 'require "csl/styles"; puts CSL::Style.all.map(&:id).grep(/physics|american/)'
 
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
