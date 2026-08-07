@@ -21,6 +21,6 @@ nav_order: 1
 
 ## Others
 
-{% bibliography -f mypublication --query @*[keywords = "other"] %}
+{% bibliography -f mypublication --query @*[keywords:other] %}
 
 </div>
