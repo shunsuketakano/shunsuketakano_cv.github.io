@@ -83,6 +83,14 @@ jobs:
           echo "Available APS/Nature styles:"
           find "$(bundle show csl-styles)" -type f \( -iname "*physics*.csl" -o -iname "*nature*.csl" -o -iname "*american*.csl" \) | sort
       
+      - name: Locate bib template
+        run: |
+          echo "al_folio_core:"
+          bundle show al_folio_core
+          echo
+          echo "bib.liquid:"
+          find "$(bundle show al_folio_core)" -type f -name "bib.liquid" -print
+          
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
