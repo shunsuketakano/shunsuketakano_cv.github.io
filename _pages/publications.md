@@ -16,6 +16,6 @@ nav_order: 1
 
 ## Original Research Articles
 
-{% bibliography -f papers %}
+{% bibliography -f mypublication %}
 
 </div>
