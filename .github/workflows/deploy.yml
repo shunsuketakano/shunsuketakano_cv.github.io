@@ -78,8 +78,11 @@ jobs:
 
       - name: Check CSL styles
         run: |
-          bundle exec ruby -e 'require "csl/styles"; puts CSL::Style.all.map(&:id).grep(/physics|american/)'
-
+          echo "csl-styles location:"
+          bundle show csl-styles
+          echo "Available APS/Nature styles:"
+          find "$(bundle show csl-styles)" -type f \( -iname "*physics*.csl" -o -iname "*nature*.csl" -o -iname "*american*.csl" \) | sort
+      
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
