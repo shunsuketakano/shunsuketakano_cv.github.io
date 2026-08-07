@@ -16,10 +16,10 @@ nav_order: 1
 
 ## Original Research Articles
 
-{% bibliography --query @*[keywords = "article"] %}
+{% bibliography -f mypublication --query @*[keywords = "article"] %}
 
 ## Others
 
-{% bibliography --query @*[keywords = "other"] %}
+{% bibliography -f mypublication --query @*[keywords = "other"] %}
 
 </div>
