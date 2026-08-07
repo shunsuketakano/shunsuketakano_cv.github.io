@@ -107,6 +107,11 @@ jobs:
           ls -la _site
           ls -la _site/assets
           ls -la _site/assets/css
+      
+      - name: Check generated html
+        run: |
+          find _site -name "*.html" | head -20
+          grep -R "stylesheet" _site | head -20
           
       - name: Check about
         run: |
