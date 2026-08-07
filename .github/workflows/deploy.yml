@@ -107,9 +107,14 @@ jobs:
           ls -la _site
           ls -la _site/assets
           ls -la _site/assets/css
+          
+      - name: Check about
+        run: |
+          find _site -iname "*about*"
 
       - name: Check generated link
         run: |
+          find _site -name "*.html" | head -20
           grep -R "main.css" _site | head -20
           
       - name: Purge unused CSS 🧹
