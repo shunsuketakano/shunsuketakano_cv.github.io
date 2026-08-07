@@ -76,6 +76,10 @@ jobs:
           ruby-version: "3.3.5"
           bundler-cache: true
 
+      - name: Check CSL styles
+        run: |
+        bundle exec ruby -e 'require "csl/styles"; puts CSL::Style.all.map(&:id).grep(/physics|american/)'
+
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
