@@ -14,6 +14,12 @@ nav_order: 1
 
 <div class="publications">
 
-{% bibliography %}
+## Original Research Articles
+
+{% bibliography --query @*[keywords = "article"] %}
+
+## Others
+
+{% bibliography --query @*[keywords = "other"] %}
 
 </div>
