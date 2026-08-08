@@ -8,8 +8,6 @@ nav_order: 2
 
 <div class="publications">
 
-## Conferences
-
 {% bibliography -f mypresentation %}
 
 </div>
