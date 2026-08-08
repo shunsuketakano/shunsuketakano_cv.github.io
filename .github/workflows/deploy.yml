@@ -142,7 +142,8 @@ jobs:
             {{ entry.booktitle }}
             {% if entry.volume %} {{ entry.volume }}{% endif %}
             {% if entryyear != "" %}
-              ({{ entryyear | strip }}/{% case entry.month %}
+              ({{ entryyear | strip }}/{% assign month_name = entry.month | downcase %}
+              {% case month_name %}
                 {% when "January" %}01
                 {% when "February" %}02
                 {% when "March" %}03
@@ -155,7 +156,8 @@ jobs:
                 {% when "October" %}10
                 {% when "November" %}11
                 {% when "December" %}12
-                {% else %}{{ entry.month }}{% endcase %}/{% if entry.day %}{{ entry.day | prepend: "0" | slice: -2, 2 }}{% endif %})
+                {% else %}{{ entry.month }}{% endcase %}/
+              {% if entry.day %}{{ entry.day | prepend: "0" | slice: -2, 2 }}{% endif %})
             {% endif %}
             {% if entry.address %}, {{ entry.address }}{% endif %}
           {% else %}
