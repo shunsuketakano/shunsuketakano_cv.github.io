@@ -142,6 +142,9 @@ jobs:
           echo "===== PUBLICATIONS PAGE ====="
           cat _pages/publications.md
 
+          echo "===== JEKYLL SCHOLAR HELP ====="
+          bundle exec jekyll-scholar --help || true
+          
           echo "===== BUILD ====="
           bundle exec jekyll build
           
