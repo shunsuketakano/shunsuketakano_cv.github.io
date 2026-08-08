@@ -70,6 +70,13 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
+      - name: Check bibliography files
+        run: |
+          echo "===== BIBLIOGRAPHY ====="
+          ls -la _bibliography/
+          echo "===== MY PUBLICATION ====="
+          test -f _bibliography/mypublication.bib && echo "FOUND" || echo "NOT FOUND"
+
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
