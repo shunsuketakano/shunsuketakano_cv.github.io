@@ -163,6 +163,9 @@ jobs:
           echo "===== JEKYLL-SCHOLAR GEM ====="
           bundle info jekyll-scholar
           
+          echo "===== BIBLIOGRAPHY FILES ====="
+          find _bibliography -maxdepth 1 -type f -print
+          
           echo "===== BUILD ====="
           bundle exec jekyll build
           
