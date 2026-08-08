@@ -178,6 +178,9 @@ jobs:
           
           echo "===== BIB TEMPLATE AFTER PATCH ====="
           grep -n -A1 -B1 "capture periodical" "$BIB"
+
+          echo "===== DIMENSIONS IN BIB TEMPLATE ====="
+          grep -n -i -A5 -B5 "dimensions" "$BIB" || true
     
           echo "===== BUILD ====="
           bundle exec jekyll build
