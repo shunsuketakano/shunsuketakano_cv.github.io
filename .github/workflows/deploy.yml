@@ -187,7 +187,7 @@ jobs:
 
           echo "===== PUBLICATION BADGES CONFIG ====="
           grep -n -A10 -B2 "enable_publication_badges" _config.yml || true
-    
+          
           echo "===== ACHIEVEMENTS FILE ====="
           cat _pages/achievements.md
           
@@ -199,6 +199,15 @@ jobs:
           
           echo "===== NAV / CHILDREN ====="
           grep -R -n -A20 -B2 "children:" _pages _data 2>/dev/null || true
+
+          echo "===== NAVIGATION IMPLEMENTATION ====="
+          CORE="$(bundle show al_folio_core)"
+          
+          echo "$CORE"
+          grep -R -n -E "children|dropdown" "$CORE" \
+          --include="*.liquid" \
+          --include="*.rb" \
+          | head -200
           
           echo "===== BUILD ====="
           bundle exec jekyll build
