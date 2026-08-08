@@ -158,6 +158,7 @@ jobs:
           echo "===== BIB TEMPLATE AFTER PATCH ====="
           grep -n -A1 -B1 "capture periodical" "$BIB"
           
+          bundle exec jekyll-scholar --version || true
           bundle exec jekyll build
           
       - name: Check build output
