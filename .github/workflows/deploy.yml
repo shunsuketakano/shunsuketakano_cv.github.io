@@ -176,9 +176,12 @@ jobs:
           SCHOLAR="$(bundle info jekyll-scholar --path)"
           grep -R -n -A30 -B10 "class.*Bibliography\|def render" "$SCHOLAR/lib/jekyll/scholar" | head -200
           
+          echo "===== CONFERENCE ENTRYTYPE DEBUG ====="
+          grep -R -n -A20 -B10 "entrytype" "$BIB" | head -100
+          
           echo "===== BIB TEMPLATE AFTER PATCH ====="
-          grep -n -A1 -B1 "capture periodical" "$BIB"
-
+          grep -n -A20 -B5 "capture periodical" "$BIB"
+          
           echo "===== DIMENSIONS IN BIB TEMPLATE ====="
           grep -n -i -A5 -B5 "dimensions" "$BIB" || true
 
