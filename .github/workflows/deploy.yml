@@ -137,7 +137,7 @@ jobs:
           text = path.read_text()
           
           old = '''{% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}'''
-          new = '''{% capture periodical %}{% if entrytype == "conference" %}{{ entry.booktitle }}{% if entry.volume %} {{ entry.volume }}{% endif %}{% if entryyear != "" %} ({{ entryyear | strip }}){% endif %}{% if entry.address %}, {{ entry.address }}{% endif %}{% else %}{{ entrytype }}{% if entry.volume %} {{ entry.volume }}{% if entry.pages %}, {{ entry.pages }}{% endif %}{% elsif entry.arxiv %} arXiv:{{ entry.arxiv }}{% elsif entry.eprint %} arXiv:{{ entry.eprint }}{% endif %}{% if entryyear != "" %} ({{ entryyear | strip }}){% endif %}{% endif %}{% endcapture %}'''
+          new = '''{% capture periodical %}{% if entry.type == "conference" %}{{ entry.booktitle }}{% if entry.volume %} {{ entry.volume }}{% endif %}{% if entryyear != "" %} ({{ entryyear | strip }}){% endif %}{% if entry.address %}, {{ entry.address }}{% endif %}{% else %}{{ entrytype }}{% if entry.volume %} {{ entry.volume }}{% if entry.pages %}, {{ entry.pages }}{% endif %}{% elsif entry.arxiv %} arXiv:{{ entry.arxiv }}{% elsif entry.eprint %} arXiv:{{ entry.eprint }}{% endif %}{% if entryyear != "" %} ({{ entryyear | strip }}){% endif %}{% endif %}{% endcapture %}'''
           
           if old not in text:
             raise SystemExit("ERROR: target periodical block was not found in bib.liquid")
