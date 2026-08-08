@@ -188,6 +188,18 @@ jobs:
           echo "===== PUBLICATION BADGES CONFIG ====="
           grep -n -A10 -B2 "enable_publication_badges" _config.yml || true
     
+          echo "===== ACHIEVEMENTS FILE ====="
+          cat _pages/achievements.md
+          
+          echo "===== PRESENTATIONS FILE ====="
+          cat _pages/presentations.md
+          
+          echo "===== ALL PAGE FRONT MATTER ====="
+          find _pages -maxdepth 1 -type f -name "*.md" -print | sort
+          
+          echo "===== NAV / CHILDREN ====="
+          grep -R -n -A20 -B2 "children:" _pages _data 2>/dev/null || true
+          
           echo "===== BUILD ====="
           bundle exec jekyll build
           
