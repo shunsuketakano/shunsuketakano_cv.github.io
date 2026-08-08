@@ -113,6 +113,8 @@ jobs:
           print(f"proceedings: {len(proceedings)}")
           PY
           
+          echo "===== TEST JOURNAL FILTER ====="
+          echo "THIS IS THE WORKFLOW BEING USED"
           bundle exec jekyll build
                     
       - name: Purge unused CSS 🧹
