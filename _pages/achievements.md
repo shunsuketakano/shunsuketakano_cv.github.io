@@ -6,17 +6,15 @@ nav: true
 nav_order: 5
 dropdown: true
 children:
-  - title: publications
+  - title: Publications
     permalink: /publications/
-  - title: other publications
-    permalink: /other-publications/
-  - title: intellectual property
+  - title: Intellectual Property
     permalink: /patents/
-  - title: presentations
+  - title: Presentations
     permalink: /presentations/
-  - title: awards
+  - title: Honours and Awards
     permalink: /awards/
-  - title: research grants
+  - title: Research Grants
     permalink: /grants/
 ---
 
