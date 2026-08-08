@@ -12,6 +12,6 @@ nav_order: 1
 
 ## Original Research Articles
 
-{% bibliography -f mypublication --query '@*[keywords~=journal]' %}
+{% bibliography -f mypublication %}
 
 </div>
