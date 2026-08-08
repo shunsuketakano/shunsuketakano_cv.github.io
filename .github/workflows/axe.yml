@@ -46,7 +46,28 @@ jobs:
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
+          
+          BIB="$(bundle show al_folio_core)/_layouts/bib.liquid"
+          
+          python3 - "$BIB" <<'PY'
+          from pathlib import Path
+          import sys
+          
+          path = Path(sys.argv[1])
+          text = path.read_text()
+          
+          old = '''{% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}'''
+          new = '''{% capture periodical %}{{ entrytype }}{% if entry.volume %} {{ entry.volume }}{% endif %}{% if entry.pages %}, {{ entry.pages }}{% endif %}{% if entryyear != "" %} ({{ entryyear | strip }}){% endif %}{% endcapture %}'''
+          
+          if old not in text:
+            raise SystemExit("ERROR: target periodical block was not found")
+          
+          path.write_text(text.replace(old, new, 1))
+          print(f"Patched: {path}")
+          PY
+          
           bundle exec jekyll build
+        
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
