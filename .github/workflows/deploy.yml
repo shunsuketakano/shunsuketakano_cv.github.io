@@ -158,7 +158,12 @@ jobs:
           echo "===== BIB TEMPLATE AFTER PATCH ====="
           grep -n -A1 -B1 "capture periodical" "$BIB"
           
-          bundle exec jekyll-scholar --version || true
+          echo "===== JEKYLL-SCHOLAR VERSION ====="
+          bundle exec ruby -e 'puts Gem.loaded_specs["jekyll-scholar"]&.version || "jekyll-scholar not loaded"'
+          echo "===== JEKYLL-SCHOLAR GEM ====="
+          bundle info jekyll-scholar
+          
+          echo "===== BUILD ====="
           bundle exec jekyll build
           
       - name: Check build output
