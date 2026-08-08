@@ -138,7 +138,7 @@ jobs:
           
           old = '''{% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}'''
           new = '''{% capture periodical %}
-          {% if entrytype == "conference" %}
+          {% if entry.type == "conference" %}
             {{ entry.booktitle }}
             {% if entry.volume %} {{ entry.volume }}{% endif %}
             {% if entryyear != "" %}
