@@ -181,6 +181,12 @@ jobs:
 
           echo "===== DIMENSIONS IN BIB TEMPLATE ====="
           grep -n -i -A5 -B5 "dimensions" "$BIB" || true
+
+          echo "===== DIMENSIONS BADGE LOGIC ====="
+          grep -R -n -A10 -B10 "entry_has_dimensions_badge" "$BIB" "$(bundle info al_folio_core --path)" 2>/dev/null | head -100
+
+          echo "===== PUBLICATION BADGES CONFIG ====="
+          grep -n -A10 -B2 "enable_publication_badges" _config.yml || true
     
           echo "===== BUILD ====="
           bundle exec jekyll build
