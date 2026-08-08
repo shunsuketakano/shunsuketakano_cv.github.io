@@ -127,52 +127,14 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           
-          BIB="$(bundle show al_folio_core)/_layouts/bib.liquid"
-          
-          python3 - "$BIB" <<'PY'
-          from pathlib import Path
-          import sys
-          
-          path = Path(sys.argv[1])
-          text = path.read_text()
-          
-          old = '''{% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}'''
-          new = '''{% capture periodical %}{{ entrytype }}{% if entry.volume %} {{ entry.volume }}{% if entry.pages %}, {{ entry.pages }}{% endif %}{% elsif entry.arxiv %} arXiv:{{ entry.arxiv }}{% elsif entry.eprint %} arXiv:{{ entry.eprint }}{% endif %}{% if entryyear != "" %} ({{ entryyear | strip }}){% endif %}{% endcapture %}'''
-                    
-          if old not in text:
-            raise SystemExit("ERROR: target periodical block was not found in bib.liquid")
-          
-          text = text.replace(old, new, 1)
-          
-          old_website = '''{% if entry.website %}
-            <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
-          {% endif %}'''
-          
-          new_website = '''{% if entry.url %}
-            <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">Full</a>
-          {% endif %}
-          {% if entry.website %}
-            <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
-          {% endif %}'''
-          
-          if old_website not in text:
-            raise SystemExit("ERROR: target website block was not found in bib.liquid")
-          
-          text = text.replace(old_website, new_website, 1)
-          path.write_text(text)
-          PY
-          
-          echo "===== BIB TEMPLATE AFTER PATCH ====="
-          grep -n -A1 -B1 "capture periodical" "$BIB"
-          
-          echo "===== JEKYLL-SCHOLAR VERSION ====="
-          bundle exec ruby -e 'puts Gem.loaded_specs["jekyll-scholar"]&.version || "jekyll-scholar not loaded"'
-          echo "===== JEKYLL-SCHOLAR GEM ====="
-          bundle info jekyll-scholar
-          
           echo "===== BIBLIOGRAPHY FILES ====="
           find _bibliography -maxdepth 1 -type f -print
+          
+          echo "===== MYPUBLICATION ====="
           test -f _bibliography/mypublication.bib && echo "MYPUBLICATION: FOUND" || echo "MYPUBLICATION: NOT FOUND"
+          
+          echo "===== JOURNAL KEYWORDS IN BIB ====="
+          grep -in "keywords.*journal" _bibliography/mypublication.bib || true
           
           echo "===== BUILD ====="
           bundle exec jekyll build
