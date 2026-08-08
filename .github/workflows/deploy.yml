@@ -212,6 +212,9 @@ jobs:
           --include="*.rb" \
           | head -200
           
+          echo "===== PRESENTATION HTML STRUCTURE ====="
+          grep -R -n -A5 -B5 "Symposium on Molecular Chirality" _site/presentations/index.html | head -100
+          
           echo "===== BUILD ====="
           bundle exec jekyll build
           
