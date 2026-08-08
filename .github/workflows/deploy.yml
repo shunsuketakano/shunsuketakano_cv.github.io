@@ -138,7 +138,27 @@ jobs:
           
           old = '''{% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}'''
           new = '''{% capture periodical %}
-          {% if entry.type == "conference" %}
+          {% if entry.type == "award" %}
+            {% if entry.booktitle %}{{ entry.booktitle }}{% endif %}
+            {% if entry.volume %} {{ entry.volume }}{% endif %}
+            {% if entryyear != "" %}
+              ({{ entryyear | strip }}/{% assign month_name = entry.month | downcase %}
+              {% case month_name %}
+                {% when "january" %}01
+                {% when "february" %}02
+                {% when "march" %}03
+                {% when "april" %}04
+                {% when "may" %}05
+                {% when "june" %}06
+                {% when "july" %}07
+                {% when "august" %}08
+                {% when "september" %}09
+                {% when "october" %}10
+                {% when "november" %}11
+                {% when "december" %}12
+                {% else %}{{ entry.month }}{% endcase %}/{% if entry.day %}{{ entry.day | prepend: "0" | slice: -2, 2 }}{% endif %})
+            {% endif %}
+          {% elsif entry.type == "conference" %}
             {{ entry.booktitle }}
             {% if entry.volume %} {{ entry.volume }}{% endif %}
             {% if entryyear != "" %}
