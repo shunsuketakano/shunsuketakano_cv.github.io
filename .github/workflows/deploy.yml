@@ -139,6 +139,9 @@ jobs:
           echo "===== SCHOLAR CONFIG ====="
           grep -n -A20 "^scholar:" _config.yml
 
+          echo "===== PUBLICATIONS PAGE ====="
+          grep -n -A10 -B2 "bibliography.*mypublication" _pages/publications.md
+
           echo "===== BUILD ====="
           bundle exec jekyll build
           
