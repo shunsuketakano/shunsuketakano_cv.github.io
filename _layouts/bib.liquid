@@ -1,15 +1,3 @@
-{%- comment -%}
-  Custom bibliography layout.
-  Based on al-folio's bib.liquid.
-
-  Added:
-    - volume
-    - number
-    - pages
-    - Open Access
-{%- endcomment -%}
-
-```liquid
 {% if site.enable_publication_thumbnails %}
   {%- if entry.abbr -%}
     {%- if site.data.venues[entry.abbr] -%}
@@ -450,4 +438,3 @@
 {% if entry.video and site.enable_video_embedding %}
   {% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}
 {% endif %}
-```
