@@ -147,6 +147,11 @@ jobs:
           
           echo "===== JEKYLL-SCHOLAR GEM PATH ====="
           bundle info jekyll-scholar
+
+          echo "===== SCHOLAR UTILITIES ====="
+          SCHOLAR="$(bundle info jekyll-scholar --path)"
+          echo "$SCHOLAR"
+          sed -n '190,245p' "$SCHOLAR/lib/jekyll/scholar/utilities.rb"
           
           echo "===== BUILD ====="
           bundle exec jekyll build
