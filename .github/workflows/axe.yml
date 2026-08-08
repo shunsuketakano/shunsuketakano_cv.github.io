@@ -66,6 +66,27 @@ jobs:
           print(f"Patched: {path}")
           PY
           
+          echo "===== CHECK BIB FILE ====="
+          grep -A15 -B2 "Takano2025PhysRevE" _bibliography/*.bib || true
+          echo "===== CHECK AL_FOLIO BIB TEMPLATE ====="
+          BIB="$(bundle show al_folio_core)/_layouts/bib.liquid"
+          grep -n "capture periodical" "$BIB"
+          
+          echo "===== CHECK BIB ENTRY FIELDS ====="
+          ruby -e '
+            require "bibtex"
+            f = Dir["_bibliography/*.bib"].first
+            b = BibTeX.open(f)
+            e = b["Takano2025PhysRevE"]
+            puts "TYPE   = #{e.type.inspect}"
+            puts "VOLUME = #{e["volume"].inspect}"
+            puts "NUMBER = #{e["number"].inspect}"
+            puts "PAGES  = #{e["pages"].inspect}"
+            puts "YEAR   = #{e["year"].inspect}"
+            puts "DOI    = #{e["doi"].inspect}"
+            puts "ARXIV  = #{e["arxiv"].inspect}"
+          '
+          
           bundle exec jekyll build
         
       - name: Purge unused CSS 🧹
