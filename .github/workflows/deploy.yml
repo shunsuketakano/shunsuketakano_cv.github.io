@@ -142,8 +142,11 @@ jobs:
           echo "===== PUBLICATIONS PAGE ====="
           cat _pages/publications.md
 
-          echo "===== JEKYLL SCHOLAR HELP ====="
-          bundle exec jekyll-scholar --help || true
+          echo "===== JEKYLL-SCHOLAR VERSION ====="
+          bundle exec ruby -e 'require "jekyll/scholar"; puts Jekyll::Scholar::VERSION rescue puts "VERSION UNKNOWN"'
+          
+          echo "===== JEKYLL-SCHOLAR GEM PATH ====="
+          bundle info jekyll-scholar
           
           echo "===== BUILD ====="
           bundle exec jekyll build
