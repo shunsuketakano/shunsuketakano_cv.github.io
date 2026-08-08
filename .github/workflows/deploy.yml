@@ -152,6 +152,10 @@ jobs:
           SCHOLAR="$(bundle info jekyll-scholar --path)"
           echo "$SCHOLAR"
           sed -n '190,245p' "$SCHOLAR/lib/jekyll/scholar/utilities.rb"
+
+          echo "===== BIBLIOGRAPHY TAG ====="
+          SCHOLAR="$(bundle info jekyll-scholar --path)"
+          grep -R -n -A30 -B10 "class.*Bibliography\|def render" "$SCHOLAR/lib/jekyll/scholar" | head -200
           
           echo "===== BUILD ====="
           bundle exec jekyll build
