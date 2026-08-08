@@ -87,6 +87,45 @@ jobs:
             puts "ARXIV  = #{e["arxiv"].inspect}"
           '
           
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          
+          src = Path("_bibliography/mypublication.bib")
+          text = src.read_text()
+          
+          entries = re.split(r'(?=^@)', text, flags=re.MULTILINE)
+          
+          journal = []
+          book = []
+          other = []
+          
+          for entry in entries:
+            if not entry.strip():
+              continue
+            
+            m = re.search(r'keywords\s*=\s*\{([^}]*)\}', entry, re.IGNORECASE)
+            keywords = m.group(1).lower().split(",") if m else []
+            keywords = [k.strip() for k in keywords]
+            
+            if "journal" in keywords:
+              journal.append(entry)
+            elif "preprint" in keywords:
+              preprint.append(entry)
+            elif "proceedings" in keywords:
+              proceedings.append(entry)
+          
+          out = Path("_bibliography")
+          
+          (out / "journal.bib").write_text("\n".join(journal))
+          (out / "preprint.bib").write_text("\n".join(preprint))
+          (out / "proceedings.bib").write_text("\n".join(proceedings))
+          
+          print(f"journal: {len(journal)}")
+          print(f"preprint: {len(preprint)}")
+          print(f"proceedings: {len(proceedings)}")
+          PY
+          
           bundle exec jekyll build
         
       - name: Purge unused CSS 🧹
