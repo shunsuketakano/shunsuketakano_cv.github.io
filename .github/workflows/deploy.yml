@@ -142,7 +142,20 @@ jobs:
             {{ entry.booktitle }}
             {% if entry.volume %} {{ entry.volume }}{% endif %}
             {% if entryyear != "" %}
-              ({{ entryyear | strip }}/{% if entry.month %}{{ entry.month | prepend: "0" | slice: -2, 2 }}{% else %}01{% endif %}/{% if entry.day %}{{ entry.day | prepend: "0" | slice: -2, 2 }}{% else %}01{% endif %})
+              ({{ entryyear | strip }}/{% case entry.month %}
+                {% when "January" %}01
+                {% when "February" %}02
+                {% when "March" %}03
+                {% when "April" %}04
+                {% when "May" %}05
+                {% when "June" %}06
+                {% when "July" %}07
+                {% when "August" %}08
+                {% when "September" %}09
+                {% when "October" %}10
+                {% when "November" %}11
+                {% when "December" %}12
+                {% else %}{{ entry.month }}{% endcase %}/{% if entry.day %}{{ entry.day | prepend: "0" | slice: -2, 2 }}{% endif %})
             {% endif %}
             {% if entry.address %}, {{ entry.address }}{% endif %}
           {% else %}
