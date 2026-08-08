@@ -20,3 +20,12 @@
 body {
   font-family: var(--font-family);
 }
+
+/* Spacing between bibliography items */
+.publications {
+  .bibliography {
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
