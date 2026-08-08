@@ -136,6 +136,9 @@ jobs:
           echo "===== JOURNAL KEYWORDS IN BIB ====="
           grep -in "keywords.*journal" _bibliography/mypublication.bib || true
           
+          echo "===== SCHOLAR CONFIG ====="
+          grep -n -A20 "^scholar:" _config.yml
+
           echo "===== BUILD ====="
           bundle exec jekyll build
           
