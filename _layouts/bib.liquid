@@ -86,6 +86,7 @@
   {%- endif -%}
 
   {% assign coauthor_url = null %}
+
   {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
 
   {% if site.data.coauthors[clean_last_name] %}
@@ -93,14 +94,15 @@
       {% if coauthor.firstname contains author.first %}
         {%- assign coauthor_url = coauthor.url -%}
         {% break %}
-      {% endif %}
-    {%- endfor -%}
-  {% endif %}
+      {%- endif -%}
+    {% endfor %}
+  {%- endif -%}
 
   {%- if forloop.length > 1 -%}
     {% if forloop.first == false -%}
-      {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %} {% endif %}
+      {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %}  {% endif %}
     {%- endif %}
+
     {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
   {% endif %}
 
@@ -201,10 +203,9 @@
 {% assign entrytype_text = entrytype | strip_html | strip %}
 
 {%- comment -%}
-  Publication information:
-  Journal Volume, Pages (Year)
-
-  number is intentionally not displayed.
+  Publication information.
+  Added volume and pages.
+  Number is intentionally not displayed.
 {%- endcomment -%}
 
 {% capture periodical %}
@@ -225,11 +226,7 @@
 {{ entry.note | strip }}
 
 {% if entry.award %}
-  {%- if entry.award_name %}
-    {{ entry.award_name }}
-  {% else %}
-    Awarded
-  {% endif -%}
+  {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
 {% endif %}
 
 {% if entry.abstract %}
