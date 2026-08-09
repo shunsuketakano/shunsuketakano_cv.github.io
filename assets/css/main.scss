@@ -29,3 +29,19 @@ body {
     }
   }
 }
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: color-mix(
+    in srgb,
+    var(--global-bg-color) 85%,
+    transparent
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
