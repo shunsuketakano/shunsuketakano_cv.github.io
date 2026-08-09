@@ -29,29 +29,3 @@ body {
     }
   }
 }
-
-/* Fixed navigation header */
-.navbar {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-
-  background-color: color-mix(
-    in srgb,
-    var(--global-bg-color) 85%,
-    transparent
-  ) !important;
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  }
-
-main {
-  padding-top: 70px;
-}
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
