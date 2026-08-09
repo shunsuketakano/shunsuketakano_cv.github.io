@@ -30,9 +30,9 @@ body {
   }
 }
 
-/* Header */
-header {
-  position: sticky;
+/* Sticky navigation header */
+.navbar {
+  position: sticky !important;
   top: 0;
   z-index: 1000;
 
@@ -40,7 +40,7 @@ header {
     in srgb,
     var(--global-bg-color) 85%,
     transparent
-  );
+  ) !important;
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
