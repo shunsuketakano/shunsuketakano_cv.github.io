@@ -1,15 +1,15 @@
 ---
 layout: page
+title: Teaching
 permalink: /teaching/
-title: Education & Outreach
-description: Course materials, schedules, and resources for classes taught.
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 2
+dropdown: true
+children:
+  - title: Higher Education
+    permalink: /education/
+  - title: Public Outreach
+    permalink: /outreach/
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
-
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
-
-{% include courses.liquid %}
+Research achievements including publications, presentations, intellectual property, awards, and grants.
