@@ -6,5 +6,5 @@ description: Start learning what soft matter is, even from high-school-level phy
 nav: true
 nav_order: 6
 display_categories: [work, fun]
-horizontal: true
+horizontal: false
 ---
