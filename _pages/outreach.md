@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /education/
+permalink: /outreach/
 title: Publich Outreach
 description: Course materials, schedules, and resources for classes taught.
 nav_order: 2
