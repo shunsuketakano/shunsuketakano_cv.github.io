@@ -8,7 +8,7 @@ nav_order: 6
 display_categories: [液晶編, ソフトマター全般編, 基礎編]
 ---
 
-<div class="lectures">
+<div class="learn">
 
   {% for category in page.display_categories %}
 
@@ -19,21 +19,28 @@ display_categories: [液晶編, ソフトマター全般編, 基礎編]
     {% assign categorized_lectures = site.learn | where: "category", category %}
     {% assign sorted_lectures = categorized_lectures | sort: "importance" %}
 
-    {% for lecture in sorted_lectures %}
-      <a href="{{ lecture.url | relative_url }}" class="lecture-item">
-        <h3>{{ lecture.title }}</h3>
-        
-        {% if lecture.description %}
-          <p>{{ lecture.description }}</p>
-        {% endif %}
-        
-        {% if lecture.last_modified_at %}
-          <p class="lecture-meta">
-            Last updated: {{ lecture.last_modified_at | date: "%B %-d, %Y" }}
-          </p>
-    {% endif %}
-  </a>
-{% endfor %}
+    <div class="row">
+      {% for lecture in sorted_lectures %}
+        <div class="col-12">
+          <a href="{{ lecture.url | relative_url }}" class="lecture-item">
+
+            <h3>{{ lecture.title }}</h3>
+
+            {% if lecture.description %}
+              <p>{{ lecture.description }}</p>
+            {% endif %}
+
+            {% if lecture.last_modified_at %}
+              <p class="lecture-meta">
+                Last updated:
+                {{ lecture.last_modified_at | date: "%B %-d, %Y" }}
+              </p>
+            {% endif %}
+
+          </a>
+        </div>
+      {% endfor %}
+    </div>
 
   {% endfor %}
 
