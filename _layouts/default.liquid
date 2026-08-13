@@ -1,0 +1,18 @@
+<!-- Content -->
+<div class="container mt-5" role="main">
+
+  {% unless page.url == '/learn/' %}
+    {% if page.created_at or page.last_modified_at %}
+      <p class="page-meta">
+        {% if page.created_at %}
+          Created on {{ page.created_at | date: '%B %-d, %Y' }}
+        {% endif %}
+        {% if page.last_modified_at %}
+          {% if page.created_at %}, {% endif %}
+          Last updated on {{ page.last_modified_at | date: '%B %-d, %Y' }}
+        {% endif %}
+      </p>
+    {% endif %}
+  {% endunless %}
+
+  {% if page.toc and page.toc.sidebar %}
