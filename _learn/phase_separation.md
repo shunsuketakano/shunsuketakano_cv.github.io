@@ -4,7 +4,7 @@ title: 相分離
 description: 2種の異なる液相に分かれる現象の仕組み
 img: assets/img/12.jpg
 importance: 1
-category: softmatter
+category: ソフトマター全般編
 related_publications: true
 ---
 
