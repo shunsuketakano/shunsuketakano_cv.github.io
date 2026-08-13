@@ -130,6 +130,11 @@ jobs:
         run: |
           CORE="$(bundle show al_folio_core)"
           grep -n "include" "$CORE/_layouts/default.liquid"
+
+      - name: Show header
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          cat "$CORE/_includes/header.liquid"
       
       - name: Locate bib template
         run: |
