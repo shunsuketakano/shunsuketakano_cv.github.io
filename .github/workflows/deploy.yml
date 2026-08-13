@@ -125,6 +125,11 @@ jobs:
         run: |
           CORE="$(bundle show al_folio_core)"
           sed -n '15,35p' "$CORE/_layouts/post.liquid"
+
+      - name: Check default includes
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          grep -n "include" "$CORE/_layouts/default.liquid"
       
       - name: Locate bib template
         run: |
