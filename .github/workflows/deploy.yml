@@ -102,6 +102,14 @@ jobs:
         run: |
           CORE="$(bundle show al_folio_core)"
           cat "$CORE/_layouts/default.liquid"
+
+      - name: Find date handling
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          grep -R -n -E "last_modified|modified_at|page.date|date.*page" "$CORE" \
+            --include="*.liquid" \
+            --include="*.rb" \
+            | head -200
       
       - name: Locate bib template
         run: |
