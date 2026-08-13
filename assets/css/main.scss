@@ -29,3 +29,37 @@ body {
     }
   }
 }
+
+/* Learn */
+.learn .category {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.learn .row {
+  margin-bottom: 3rem;
+}
+
+.learn .lecture-item {
+  display: block;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.learn .lecture-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.learn .lecture-item p {
+  margin-bottom: 0;
+}
+
+.learn .lecture-item .lecture-meta {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
