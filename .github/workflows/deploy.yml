@@ -98,10 +98,10 @@ jobs:
           echo "al_folio_core: $CORE"
           find "$CORE" -type f \( -name "page.liquid" -o -name "page.html" \) -print
 
-      - name: Show page layout
+      - name: Show default layout
         run: |
           CORE="$(bundle show al_folio_core)"
-          cat "$CORE/_layouts/page.liquid"
+          cat "$CORE/_layouts/default.liquid"
       
       - name: Locate bib template
         run: |
