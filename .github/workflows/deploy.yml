@@ -103,6 +103,11 @@ jobs:
           CORE="$(bundle show al_folio_core)"
           cat "$CORE/_layouts/default.liquid"
 
+      - name: Show metadata include
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          cat "$CORE/_includes/metadata.liquid"
+
       - name: Find date handling
         run: |
           CORE="$(bundle show al_folio_core)"
