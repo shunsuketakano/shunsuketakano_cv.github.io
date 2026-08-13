@@ -5,7 +5,7 @@ permalink: /learn/
 description: Start learning what soft matter is, even from high-school-level physics!
 nav: true
 nav_order: 6
-display_categories: [mesophase, softmatter, fundamentals]
+display_categories: [液晶編, ソフトマター全般編, 基礎編]
 ---
 
 <div class="lectures">
