@@ -22,12 +22,18 @@ display_categories: [mesophase, fundamentals]
     {% for lecture in sorted_lectures %}
       <a href="{{ lecture.url | relative_url }}" class="lecture-item">
         <h3>{{ lecture.title }}</h3>
-
+        
         {% if lecture.description %}
           <p>{{ lecture.description }}</p>
         {% endif %}
-      </a>
-    {% endfor %}
+        
+        {% if lecture.last_modified_at %}
+          <p class="lecture-meta">
+            Last updated: {{ lecture.last_modified_at | date: "%B %-d, %Y" }}
+          </p>
+    {% endif %}
+  </a>
+{% endfor %}
 
   {% endfor %}
 
