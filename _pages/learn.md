@@ -9,14 +9,15 @@ display_categories: [mesophase]
 horizontal: false
 ---
 
-<div class="learn">
-  {% assign sorted_projects = site.projects | sort: "importance" %}
+{% assign sorted_lectures = site.learn | sort: "importance" %}
 
-  {% for project in sorted_projects %}
-    <a href="{{ project.url | relative_url }}" class="lecture-item">
-      <h3>{{ project.title }}</h3>
-      {% if project.description %}
-        <p>{{ project.description }}</p>
+<div class="lectures">
+  {% for lecture in sorted_lectures %}
+    <a href="{{ lecture.url | relative_url }}" class="lecture-item">
+      <h3>{{ lecture.title }}</h3>
+
+      {% if lecture.description %}
+        <p>{{ lecture.description }}</p>
       {% endif %}
     </a>
   {% endfor %}
