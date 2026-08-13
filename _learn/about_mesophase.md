@@ -4,7 +4,7 @@ title: About Liquid Crystals
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
 importance: 1
-category: mesophase
+category: 液晶編
 related_publications: true
 ---
 
