@@ -42,11 +42,19 @@ body {
 
 .learn .lecture-item {
   display: block;
+  width: 100%;
   padding: 1.5rem 2rem;
   margin-bottom: 1.25rem;
+
   border: 1px solid var(--global-divider-color);
-  border-radius: 0.5rem;
-  text-decoration: none;
+  border-radius: 0.75rem;
+
+  text-decoration: none !important;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .learn .lecture-item h3 {
@@ -62,22 +70,6 @@ body {
   margin-top: 1rem;
   font-size: 0.85rem;
   opacity: 0.7;
-}
-.learn .lecture-item {
-  display: block;
-  width: 100%;
-  padding: 1.5rem 2rem;
-  margin-bottom: 1.25rem;
-
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.75rem;
-
-  text-decoration: none !important;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
 }
 
 .learn .lecture-item:hover {
