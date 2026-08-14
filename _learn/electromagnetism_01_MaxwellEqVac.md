@@ -11,6 +11,3 @@ related_publications: true
 真空中におけるMaxwell方程式
 
 電磁気学を学ぶ良書としてランダウ・リフシッツ {% cite LandauLifshitzEM %} を推奨する．
-
-
-{% bibliography --cited %}
