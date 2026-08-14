@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 電磁気学 05：幾何光学
+title: 電磁気学 05：光学顕微鏡
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
 importance: 1
@@ -8,7 +8,7 @@ category: 基礎編
 related_publications: true
 ---
 
-幾何光学近似
+幾何光学近似，レンズ，開口数，共焦点光学系
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
