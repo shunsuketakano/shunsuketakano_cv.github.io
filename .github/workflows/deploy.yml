@@ -167,6 +167,17 @@ jobs:
           grep baseurl _config.yml
           grep url _config.yml
 
+      - name: Check Scholar configuration
+        run: |
+          echo "===== SCHOLAR CONFIG ====="
+          grep -n -A20 "^scholar:" _config.yml
+          
+          echo "===== BIBLIOGRAPHY FILES ====="
+          find _bibliography -maxdepth 1 -type f -print
+          
+          echo "===== PROJECT FILE ====="
+          cat _projects/1_project.md
+
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
