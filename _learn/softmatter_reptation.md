@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 高分子溶融体の粘弾性
-description: for graduate students or researchers working on condensed matter physics
+description: ポリマー鎖が丸くまとまったブロブや隙間を這うように動くレプテーション理論でレオロジーを考える
 img: assets/img/12.jpg
 importance: 1
 category: ソフトマター全般編
