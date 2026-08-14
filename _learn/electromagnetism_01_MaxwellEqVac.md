@@ -6,6 +6,7 @@ img: assets/img/12.jpg
 importance: 1
 category: 基礎編
 related_publications: true
+bibliography: nineveh.bib  # この原稿では nineveh.bib を使用
 ---
 
 真空中におけるMaxwell方程式
