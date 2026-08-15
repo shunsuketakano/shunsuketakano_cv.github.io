@@ -5,6 +5,8 @@ description: for graduate students or researchers working on condensed matter ph
 img: assets/img/12.jpg
 importance: 1
 category: 基礎編
+related_publications: true
+learn_page: true
 ---
 
 真空中におけるMaxwell方程式
