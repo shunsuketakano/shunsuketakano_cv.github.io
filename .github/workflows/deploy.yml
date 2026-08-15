@@ -168,6 +168,14 @@ jobs:
           grep -RIn "layout.*learn\|related_publications\|bibliography.*cited" \
             _layouts "$CORE/_layouts" 2>/dev/null || true
       
+      - name: Find bibliography rendering
+        run: |
+            CORE="$(bundle show al_folio_core)"
+            echo "=== ALL bibliography rendering ==="
+            grep -RIn "{% bibliography" _layouts "$CORE/_layouts" 2>/dev/null || true
+            echo "=== ALL related_publications ==="
+            grep -RIn "related_publications" _layouts "$CORE/_layouts" 2>/dev/null || true
+      
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
