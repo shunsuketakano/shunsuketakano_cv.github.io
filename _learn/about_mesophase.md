@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: learn
 title: About Liquid Crystals
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
