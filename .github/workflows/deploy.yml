@@ -152,6 +152,10 @@ jobs:
         run: |
           CORE="$(bundle show al_folio_core)"
           cat "$CORE/_layouts/bib.liquid"
+
+      - name: Find related publications
+        run: |
+          grep -RIn "related_publications:" _learn _projects _pages _posts 2>/dev/null || true
           
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
