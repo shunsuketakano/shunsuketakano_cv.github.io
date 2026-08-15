@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: learn
 title: 電磁気学 01：Maxwell方程式（真空中）
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
