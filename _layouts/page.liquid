@@ -1,21 +1,35 @@
 ---
 layout: default
 ---
-
 {% if page._styles %}
-
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
 {% endif %}
 
-{% if page.related_publications %}
-  References
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
 
-  {% if page.learn_page %}
-    {% bibliography --group_by none --cited_in_order %}
-  {% else %}
-    {% bibliography --cited_in_order %}
+  <article>
+    {{ content }}
+  </article>
+
+  {% if page.related_publications %}
+    <h2>References</h2>
+    <div class="publications">
+      {% if page.learn_page %}
+        {% bibliography --group_by none --cited_in_order %}
+      {% else %}
+        {% bibliography --cited_in_order %}
+      {% endif %}
+    </div>
   {% endif %}
-{% endif %}
 
-{% if site.plugins contains 'al_comments' %}
-  {% include plugins/al_comments.liquid %}
-{% endif %}
+  {% if site.plugins contains 'al_comments' %}
+    {% include plugins/al_comments.liquid %}
+  {% endif %}
+</div>
