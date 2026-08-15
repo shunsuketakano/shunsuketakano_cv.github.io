@@ -1,1 +1,21 @@
+---
+layout: default
+---
 
+{% if page._styles %}
+
+{% endif %}
+
+{% if page.related_publications %}
+  References
+
+  {% if page.learn_page %}
+    {% bibliography --group_by none --cited_in_order %}
+  {% else %}
+    {% bibliography --cited_in_order %}
+  {% endif %}
+{% endif %}
+
+{% if site.plugins contains 'al_comments' %}
+  {% include plugins/al_comments.liquid %}
+{% endif %}
