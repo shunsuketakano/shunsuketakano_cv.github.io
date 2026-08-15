@@ -9,4 +9,4 @@ category: 基礎編
 
 真空中におけるMaxwell方程式
 
-電磁気学を学ぶ良書としてランダウ・リフシッツ {% cite LandauLifshitzEM %} を推奨する．
+電磁気学を学ぶ良書としてランダウ・リフシッツ {% cite LandauLifshitzEM %} を推奨する．相補的に学習をするめるには {% cite SommerfeldElectro %} も参照すると良いだろう．
