@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 {% if page._styles %}
   <!-- Page/Post style -->
   <style type="text/css">
@@ -17,17 +18,6 @@ layout: default
   <article>
     {{ content }}
   </article>
-
-  {% if page.related_publications %}
-    <h2>References</h2>
-    <div class="publications">
-      {% if page.learn_page %}
-        {% bibliography --group_by none --cited_in_order %}
-      {% else %}
-        {% bibliography --cited_in_order %}
-      {% endif %}
-    </div>
-  {% endif %}
 
   {% if site.plugins contains 'al_comments' %}
     {% include plugins/al_comments.liquid %}
