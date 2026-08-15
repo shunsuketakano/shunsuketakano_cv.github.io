@@ -185,6 +185,11 @@ jobs:
             --exclude-dir=vendor \
             .
 
+      - name: Show page layout
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          cat "$CORE/_layouts/page.liquid"
+
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
