@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% if page.related_publications %}
+  <h2>References</h2>
+
+  {% bibliography --cited_in_order %}
+{% endif %}
