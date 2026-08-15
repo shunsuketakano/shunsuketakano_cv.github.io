@@ -157,6 +157,17 @@ jobs:
         run: |
           grep -RIn "related_publications:" _learn _projects _pages _posts 2>/dev/null || true
           
+      - name: Find learn layout
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          echo "=== project layouts ==="
+          find _layouts -maxdepth 1 -type f -print
+          echo "=== core layouts ==="
+          find "$CORE/_layouts" -maxdepth 1 -type f -print
+          echo "=== learn references ==="
+          grep -RIn "layout.*learn\|related_publications\|bibliography.*cited" \
+            _layouts "$CORE/_layouts" 2>/dev/null || true
+      
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
