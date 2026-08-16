@@ -330,9 +330,19 @@ jobs:
           path = Path(sys.argv[1])
           text = path.read_text()
           
-          old = '''{% elsif site.icon and site.icon != '' %}
+          marker = '{% elsif site.icon and site.icon != \'\' %}'
+          start = text.find(marker)
           
-          {% endif %}'''
+          if start == -1:
+            raise SystemExit("ERROR: favicon elsif block was not found")
+          
+          end_marker = '{% endif %}'
+          end = text.find(end_marker, start)
+          
+          if end == -1:
+            raise SystemExit("ERROR: favicon endif was not found")
+          
+          end += len(end_marker)
           
           new = '''{% elsif site.icon and site.icon != '' %}
             {% assign icon_extension = site.icon | split: '.' | last | split: '?' | first | downcase %}
@@ -351,12 +361,14 @@ jobs:
             {% endif %}
           {% endif %}'''
           
-          if old not in text:
-            raise SystemExit("ERROR: favicon block was not found in head.liquid")
-            
-          path.write_text(text.replace(old, new, 1))
-          print(f"Patched: {path}")
+          text = text[:start] + new + text[end:]
+          path.write_text(text)
+          
+          print(f"Patched favicon: {path}")
           PY
+
+          echo "=== patched favicon block ==="
+          nl -ba "$HEAD" | sed -n '87,115p'
           
           echo "===== BIBLIOGRAPHY FILES ====="
           find _bibliography -maxdepth 1 -type f -print
