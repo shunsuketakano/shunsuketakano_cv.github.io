@@ -1,6 +1,6 @@
 ---
 layout: learn
-title: 電磁気学 03：電磁波と光
+title: 電磁気学 02：電磁波と光
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
 importance: 1
@@ -8,7 +8,7 @@ category: 基礎編
 related_publications: true
 ---
 
-真空中における電磁波
+真空中における電磁波 電荷密度もなし　ゲージの選択　偏光自由度　Lorentz変換
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
