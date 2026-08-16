@@ -367,6 +367,12 @@ jobs:
           print(f"Patched favicon: {path}")
           PY
 
+          echo "=== site.icon ==="
+          grep -nE '^[[:space:]]*icon:' _config.yml
+          
+          echo "=== patched favicon logic ==="
+          nl -ba "$HEAD" | sed -n '87,115p'
+
           echo "=== patched favicon block ==="
           nl -ba "$HEAD" | sed -n '87,115p'
           
@@ -441,6 +447,12 @@ jobs:
           
           echo "===== BUILD ====="
           bundle exec jekyll build
+
+          echo "=== generated favicon tags ==="
+          grep -RIn 'rel="icon"\|rel="shortcut icon"' _site --include='*.html' | head -30
+          
+          echo "=== generated favicon hrefs ==="
+          grep -RIn 'Malerei2\|rel="icon"\|shortcut icon' _site --include='*.html' | head -30
           
       - name: Check build output
         run: |
