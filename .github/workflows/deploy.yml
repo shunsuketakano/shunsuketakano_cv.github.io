@@ -350,13 +350,13 @@ jobs:
               <link
                 rel="icon"
                 type="image/png"
-                href="{{ site.icon | relative_url }}"
+                href="{{ '/assets/img/' | append: site.icon | relative_url }}"
               >
             {% elsif icon_extension == 'jpg' or icon_extension == 'jpeg' %}
               <link
                 rel="icon"
                 type="image/jpeg"
-                href="{{ site.icon | relative_url }}"
+                href="{{ '/assets/img/' | append: site.icon | relative_url }}"
               >
             {% endif %}
           {% endif %}'''
