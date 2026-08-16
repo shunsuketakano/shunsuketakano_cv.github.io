@@ -443,6 +443,17 @@ jobs:
           CORE="$(bundle show al_folio_core)"
           echo "=== favicon logic ==="
           sed -n '80,115p' "$CORE/_includes/head.liquid"
+
+      - name: Inspect favicon lines exactly
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          FILE="$CORE/_includes/head.liquid"
+          
+          echo "=== lines 87-112 with line numbers ==="
+          nl -ba "$FILE" | sed -n '87,112p'
+          
+          echo "=== raw bytes around favicon logic ==="
+          sed -n '87,112p' "$FILE" | cat -A
       
       - name: Locate icon logic
         run: |
