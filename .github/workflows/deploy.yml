@@ -391,6 +391,14 @@ jobs:
           ls -la _site
           ls -la _site/assets
           ls -la _site/assets/css
+
+      - name: Check generated favicon links
+        run: |
+          echo "=== favicon links ==="
+          grep -RIn '<link[^>]*icon' _site --include="*.html" | head -100 || true
+          
+          echo "=== icon references ==="
+          grep -RIn 'Malerei\|favicon\|apple-touch-icon\|⚛️' _site --include="*.html" | head -200 || true
       
       - name: Check generated html
         run: |
