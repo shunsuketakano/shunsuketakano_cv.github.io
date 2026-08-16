@@ -321,6 +321,43 @@ jobs:
           print(f"Patched: {path}")
           PY
           
+          HEAD="$(bundle show al_folio_core)/_includes/head.liquid"
+          
+          python3 - "$HEAD" <<'PY'
+          from pathlib import Path
+          import sys
+          
+          path = Path(sys.argv[1])
+          text = path.read_text()
+          
+          old = '''{% elsif site.icon and site.icon != '' %}
+          
+          {% endif %}'''
+          
+          new = '''{% elsif site.icon and site.icon != '' %}
+            {% assign icon_extension = site.icon | split: '.' | last | split: '?' | first | downcase %}
+            {% if icon_extension == 'png' %}
+              <link
+                rel="icon"
+                type="image/png"
+                href="{{ site.icon | relative_url }}"
+              >
+            {% elsif icon_extension == 'jpg' or icon_extension == 'jpeg' %}
+              <link
+                rel="icon"
+                type="image/jpeg"
+                href="{{ site.icon | relative_url }}"
+              >
+            {% endif %}
+          {% endif %}'''
+          
+          if old not in text:
+            raise SystemExit("ERROR: favicon block was not found in head.liquid")
+            
+          path.write_text(text.replace(old, new, 1))
+          print(f"Patched: {path}")
+          PY
+          
           echo "===== BIBLIOGRAPHY FILES ====="
           find _bibliography -maxdepth 1 -type f -print
           
