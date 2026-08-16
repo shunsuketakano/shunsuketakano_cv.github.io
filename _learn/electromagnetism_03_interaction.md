@@ -9,6 +9,6 @@ related_publications: true
 learn_page: true
 ---
 
-Coulombの法則　Lorentz力　Maxwellの応力　光の運動量
+Coulombの法則　Lorentz力　Maxwellの応力　光の運動量　光のエネルギー
 
 電磁気学を学ぶ良書としてランダウ・リフシッツ {% cite LandauLifshitzEM %} を推奨する．相補的に学習をするめるには {% cite SommerfeldElectro %} も参照すると良いだろう．表示テストとして {% cite Bahr1996 Brand1988 %} を記す．
