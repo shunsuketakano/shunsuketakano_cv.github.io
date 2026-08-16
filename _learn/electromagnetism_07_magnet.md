@@ -1,6 +1,6 @@
 ---
 layout: learn
-title: 電磁気学 04：物質の応答Ⅲ（磁性)
+title: 電磁気学 07：物質の応答Ⅲ（磁性)
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
 importance: 1
