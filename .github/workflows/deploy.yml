@@ -506,6 +506,15 @@ jobs:
           
           echo "=== favicon in core ==="
           grep -RIn "favicon" "$CORE" --include="*.liquid" 2>/dev/null || true
+
+      - name: Verify favicon
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          echo "=== patched favicon logic ==="
+          nl -ba "$CORE/_includes/head.liquid" | sed -n '87,115p'
+
+          echo "=== generated favicon links ==="
+          grep -RIn '<link[^>]*rel="icon"' _site --include='*.html' | head -20
           
       - name: Check generated html
         run: |
