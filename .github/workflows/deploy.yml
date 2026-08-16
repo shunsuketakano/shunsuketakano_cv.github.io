@@ -271,6 +271,8 @@ jobs:
             {% endif %}
           {% elsif entry.type == "book" %}
             {% if entry.series %}{{ entry.series }}{% endif %}
+            {% if entry.number %} {{ entry.number }}{% endif %}
+            {% if entry.edition %}, {{ entry.edition }}版{% endif %}
             {% if entry.transauthor %}, {{ entry.transauthor }}訳{% endif %}
             {% if entry.publisher %}, {{ entry.publisher }}{% endif %}
             {% if entry.address %}, {{ entry.address }}{% endif %}
