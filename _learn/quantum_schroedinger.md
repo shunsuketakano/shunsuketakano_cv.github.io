@@ -1,6 +1,6 @@
 ---
 layout: learn
-title: 量子の世界 ：Schrödingerの波動力学
+title: 量子の世界 01 ：Schrödingerの波動力学
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
 importance: 1
