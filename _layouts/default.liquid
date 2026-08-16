@@ -43,7 +43,7 @@
       {% unless page.url == '/learn/' %}
         {% if page.created_at %}
           <p class="page-meta">
-            Updated on {{ page.created_at | date: '%B %-d, %Y' }}
+            Last modified on {{ page.created_at | date: '%B %-d, %Y' }}
           </p>
         {% endif %}
       {% endunless %}
