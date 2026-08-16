@@ -392,14 +392,47 @@ jobs:
           ls -la _site/assets
           ls -la _site/assets/css
 
-      - name: Check generated favicon links
+      - name: Check generated favicon HTML
         run: |
-          echo "=== favicon links ==="
-          grep -RIn '<link[^>]*icon' _site --include="*.html" | head -100 || true
+          python3 - <<'PY'
+          from pathlib import Path
           
-          echo "=== icon references ==="
-          grep -RIn 'Malerei\|favicon\|apple-touch-icon\|⚛️' _site --include="*.html" | head -200 || true
-      
+          for name in [
+            "_site/index.html",
+            "_site/learn/index.html",
+            "_site/learn/electromagnetism_01_MaxwellEqVac/index.html",
+          ]:
+            path = Path(name)
+            
+            print()
+            print("=" * 80)
+            print(name)
+            print("=" * 80)
+            
+            if not path.exists():
+              print("FILE NOT FOUND")
+              continue
+            
+            lines = path.read_text(errors="replace").splitlines()
+            
+            print("--- first 15 lines ---")
+            for i, line in enumerate(lines[:15], 1):
+              print(f"{i}: {line}")
+            
+            print("--- favicon/icon lines ---")
+            for i, line in enumerate(lines, 1):
+              lower = line.lower()
+              if (
+                "favicon" in lower
+                or "rel=\"icon\"" in lower
+                or "rel='icon'" in lower
+                or "apple-touch-icon" in lower
+                or "malerei" in lower
+                or "⚛" in line
+              ):
+                print(f"{i}: {line}")
+          PY
+          
       - name: Check generated html
         run: |
           find _site -name "*.html" | head -20
