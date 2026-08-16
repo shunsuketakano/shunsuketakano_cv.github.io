@@ -1,6 +1,6 @@
 ---
 layout: learn
-title: 電磁気学 02：電磁場と物質の相互作用
+title: 電磁気学 03：電磁場と物質の相互作用
 description: for graduate students or researchers working on condensed matter physics
 img: assets/img/12.jpg
 importance: 1
