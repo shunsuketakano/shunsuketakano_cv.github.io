@@ -437,6 +437,19 @@ jobs:
               ):
                 print(f"{i}: {line}")
           PY
+
+      - name: Locate icon logic
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          
+          echo "=== site.icon in core ==="
+          grep -RIn "site.icon" "$CORE" --include="*.liquid" 2>/dev/null || true
+          
+          echo "=== rel=icon in core ==="
+          grep -RIn 'rel="icon"\|rel='\''icon'\''' "$CORE" --include="*.liquid" 2>/dev/null || true
+          
+          echo "=== favicon in core ==="
+          grep -RIn "favicon" "$CORE" --include="*.liquid" 2>/dev/null || true
           
       - name: Check generated html
         run: |
