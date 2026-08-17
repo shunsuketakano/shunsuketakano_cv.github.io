@@ -642,40 +642,76 @@ jobs:
           ...
           PY
 
-          UTILITIES="$(bundle show al_folio_core)/_sass/_utilities.scss"
-          python3 - "$UTILITIES" <<'PY'
+          HEADER="$(bundle show al_folio_core)/_includes/header.liquid"
+          python3 - "$HEADER" <<'PY'
           from pathlib import Path
-          import re
           import sys
 
           path = Path(sys.argv[1])
           text = path.read_text()
 
-          if re.search(r'(?m)^#progress\s*\{', text):
-            print("Progress CSS already present")
-          else:
-            addition = r'''
+          marker = "<header>"
+
+          css = """
+          <style>
+          #navbar {
+            opacity: 1 !important;
+            background-color: color-mix(
+              in srgb,
+              var(--global-bg-color) 82%,
+              transparent
+            ) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+          }
+
+          #navbar .navbar-collapse-main {
+            background-color: transparent !important;
+          }
+
           #progress {
-            position: fixed;
+            position: fixed !important;
+            top: 57px;
             left: 0;
             width: 100%;
             height: 4px;
             margin: 0;
             padding: 0;
-            z-index: 1031;
+            z-index: 1031 !important;
+            display: block;
           }
 
-          '''
+          @media (max-width: 575.98px) {
+            #navbar .navbar-toggler-main {
+              display: block !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+              position: relative;
+              z-index: 2000;
+            }
 
-            marker = '.progress-container {'
+            #navbar .navbar-toggler-main .icon-bar {
+              display: block !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+              width: 22px;
+              height: 2px;
+              margin-bottom: 4px;
+              background-color: var(--global-theme-color) !important;
+              border-radius: 1px;
+            }
+          }
+          </style>
+          """
 
-            if marker not in text:
-              raise SystemExit("ERROR: .progress-container block not found")
+          if marker not in text:
+            raise SystemExit("ERROR: <header> not found in header.liquid")
 
-            text = text.replace(marker, addition + marker, 1)
+          if css.strip() not in text:
+            text = text.replace(marker, marker + css, 1)
             path.write_text(text)
 
-          print(f"Patched progress position: {path}")
+          print(f"Patched header style: {path}")
           PY
           
           echo "===== PRESENTATION HTML STRUCTURE ====="
