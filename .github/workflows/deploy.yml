@@ -742,7 +742,7 @@ jobs:
           echo "=== generated favicon hrefs ==="
           grep -RIn 'Malerei2\|rel="icon"\|shortcut icon' _site --include='*.html' | head -30
           
-            - name: Inspect mobile content selectors
+      - name: Inspect mobile content selectors
         run: |
           echo "=== GENERATED IMAGE / FIGURE SELECTORS ==="
           grep -RhoE '<figure[^>]*>|<img[^>]*>|<picture[^>]*>' _site/learn --include='*.html' \
