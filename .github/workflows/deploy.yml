@@ -527,6 +527,21 @@ jobs:
           echo "=== generated favicon hrefs ==="
           grep -RIn 'Malerei2\|rel="icon"\|shortcut icon' _site --include='*.html' | head -30
           
+      - name: Inspect navbar source
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          
+          echo "=== HEADER.LIQUID ==="
+          cat "$CORE/_includes/header.liquid"
+          
+          echo
+          echo "=== NAVBAR.SCSS ==="
+          nl -ba "$CORE/_sass/_navbar.scss" | sed -n '1,240p'
+          
+          echo
+          echo "=== LAYOUT.SCSS ==="
+          nl -ba "$CORE/_sass/_layout.scss" | sed -n '1,80p'
+    
       - name: Debug mobile header
         run: |
           echo "=== HEADER FILES ==="
