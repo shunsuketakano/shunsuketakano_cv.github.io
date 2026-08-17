@@ -404,6 +404,41 @@ jobs:
           
           echo "===== JOURNAL KEYWORDS IN BIB ====="
           grep -in "keywords.*journal" _bibliography/mypublication.bib || true
+
+          echo "=== BOOK ENTRIES ==="
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          
+          text = Path("_bibliography/papers.bib").read_text()
+          
+          for m in re.finditer(r'@book\s*\{([^,]+),(.*?)\n\}', text, re.S | re.I):
+            key = m.group(1).strip()
+            body = m.group(2)
+            
+            print(f"\n--- {key} ---")
+            
+            for field in [
+              "title",
+              "author",
+              "series",
+              "number",
+              "edition",
+              "transauthor",
+              "publisher",
+              "address",
+              "year",
+              "month",
+              "day",
+            ]:
+              x = re.search(
+                rf'^\s*{field}\s*=\s*\{{(.*?)\}}',
+                body,
+                re.M | re.S | re.I
+              )
+              if x:
+                print(f"{field:12}: {x.group(1).strip()!r}")
+          PY
           
           echo "===== SCHOLAR CONFIG ====="
           grep -n -A20 "^scholar:" _config.yml
