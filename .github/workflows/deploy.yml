@@ -742,6 +742,30 @@ jobs:
           echo "=== generated favicon hrefs ==="
           grep -RIn 'Malerei2\|rel="icon"\|shortcut icon' _site --include='*.html' | head -30
           
+            - name: Inspect mobile content selectors
+        run: |
+          echo "=== GENERATED IMAGE / FIGURE SELECTORS ==="
+          grep -RhoE '<figure[^>]*>|<img[^>]*>|<picture[^>]*>' _site/learn --include='*.html' \
+            | head -50 || true
+
+          echo
+          echo "=== GENERATED CODE SELECTORS ==="
+          grep -RhoE '<(pre|code)[^>]*>|class="[^"]*(highlight|highlighter|code)[^"]*"' \
+            _site/learn --include='*.html' \
+            | head -80 || true
+
+          echo
+          echo "=== GENERATED TABLE SELECTORS ==="
+          grep -RhoE '<table[^>]*>|class="[^"]*table[^"]*"' \
+            _site/learn --include='*.html' \
+            | head -80 || true
+
+          echo
+          echo "=== GENERATED MATH SELECTORS ==="
+          grep -RhoE '<(mjx-container|div|span)[^>]*(MathJax|katex)[^>]*>|class="[^"]*(MathJax|katex)[^"]*"' \
+            _site/learn --include='*.html' \
+            | head -100 || true
+            
       - name: Inspect navbar source
         run: |
           CORE="$(bundle show al_folio_core)"
