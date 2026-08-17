@@ -590,6 +590,26 @@ jobs:
 
           css = """
           <style>
+          #navbar {
+            background-color: color-mix(
+              in srgb,
+              var(--global-bg-color) 82%,
+              transparent
+            ) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid
+              color-mix(
+                in srgb,
+                var(--global-divider-color) 55%,
+                transparent
+              );
+          }
+
+          #navbar .navbar-collapse-main {
+            background-color: transparent !important;
+          }
+
           @media (max-width: 575.98px) {
             #navbar .navbar-toggler-main {
               display: block !important;
@@ -620,7 +640,7 @@ jobs:
             text = text.replace(marker, marker + css, 1)
             path.write_text(text)
 
-          print(f"Patched mobile header CSS: {path}")
+          print(f"Patched header style: {path}")
           PY
           
           echo "===== PRESENTATION HTML STRUCTURE ====="
