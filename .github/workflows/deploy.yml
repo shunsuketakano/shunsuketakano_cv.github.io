@@ -636,6 +636,47 @@ jobs:
 
           print(f"Patched header style: {path}")
           PY
+
+          TAILWIND_APP="$(bundle show al_folio_core)/assets/tailwind/app.css"
+          python3 - "$TAILWIND_APP" <<'PY'
+          ...
+          PY
+
+          UTILITIES="$(bundle show al_folio_core)/_sass/_utilities.scss"
+          python3 - "$UTILITIES" <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          path = Path(sys.argv[1])
+          text = path.read_text()
+
+          if re.search(r'(?m)^#progress\s*\{', text):
+            print("Progress CSS already present")
+          else:
+            addition = r'''
+          #progress {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            margin: 0;
+            padding: 0;
+            z-index: 1031;
+          }
+
+          '''
+
+            marker = '.progress-container {'
+
+            if marker not in text:
+              raise SystemExit("ERROR: .progress-container block not found")
+
+            text = text.replace(marker, addition + marker, 1)
+            path.write_text(text)
+
+          print(f"Patched progress position: {path}")
+          PY
           
           echo "===== PRESENTATION HTML STRUCTURE ====="
           grep -R -n -A5 -B5 "Symposium on Molecular Chirality" _site/presentations/index.html | head -100
