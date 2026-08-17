@@ -668,6 +668,13 @@ jobs:
           echo "=== GENERATED main.css navbar ==="
           grep -oE '.{0,250}navbar-toggler.{0,500}' \
           _site/assets/css/main.css | head -20 || true
+
+          echo "=== VIEWPORT META ==="
+          grep -oE '<meta[^>]+name="viewport"[^>]*>' _site/index.html | head -5 || true
+
+          echo "=== NAVBAR TOGGLER CSS ==="
+          grep -oE '.{0,150}\.navbar-expand-sm \.navbar-toggler.{0,150}' \
+            _site/assets/css/tailwind.css | head -10 || true
       
       - name: Debug mobile header
         run: |
