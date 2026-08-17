@@ -598,12 +598,6 @@ jobs:
             ) !important;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid
-              color-mix(
-                in srgb,
-                var(--global-divider-color) 55%,
-                transparent
-              );
           }
 
           #navbar .navbar-collapse-main {
