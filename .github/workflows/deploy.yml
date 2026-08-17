@@ -514,33 +514,67 @@ jobs:
           --include="*.liquid" \
           --include="*.rb" \
           | head -200
-
-          NAVBAR="$(bundle show al_folio_core)/_sass/_navbar.scss"
-          python3 - "$NAVBAR" <<'PY'
+          
+          TAILWIND_APP="$(bundle show al_folio_core)/assets/tailwind/app.css"
+          python3 - "$TAILWIND_APP" <<'PY'
           from pathlib import Path
-          import re
           import sys
 
           path = Path(sys.argv[1])
           text = path.read_text()
 
-          pattern = r'(\.navbar-toggler-main\s*\{\s*margin-left:\s*auto;)(\s*\})'
+          marker = '''  .navbar-toggler {
+            padding: 0.25rem 0.75rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            background-color: transparent;
+            border: 0;
+            border-radius: 0.25rem;
+          }'''
 
-          replacement = (
-            r'\1'
-            '\n      display: block !important;'
-            '\n      visibility: visible !important;'
-            '\n      opacity: 1 !important;'
-            r'\2'
-          )
+          addition = marker + '''
 
-          new_text, count = re.subn(pattern, replacement, text, count=1)
-  
-          if count != 1:
-            raise SystemExit("ERROR: .navbar-toggler-main block not found")
+          .navbar-toggler .icon-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: var(--global-text-color);
+            border-radius: 1px;
+            margin-bottom: 4px;
+            transition: all 0.2s;
+          }
 
-          path.write_text(new_text)
-          print(f"Patched mobile navbar toggler: {path}")
+          .navbar-toggler .top-bar {
+            transform: rotate(45deg);
+            transform-origin: 10% 10%;
+          }
+
+          .navbar-toggler .middle-bar {
+            opacity: 0;
+          }
+
+          .navbar-toggler .bottom-bar {
+            transform: rotate(-45deg);
+            transform-origin: 10% 90%;
+          }
+
+          .navbar-toggler.collapsed .top-bar {
+            transform: rotate(0);
+          }
+
+          .navbar-toggler.collapsed .middle-bar {
+            opacity: 1;
+          }
+
+          .navbar-toggler.collapsed .bottom-bar {
+            transform: rotate(0);
+          }'''
+
+          if marker not in text:
+            raise SystemExit("ERROR: .navbar-toggler block not found in tailwind/app.css")
+
+          path.write_text(text.replace(marker, addition, 1))
+          print(f"Patched navbar icon bars: {path}")
           PY
           
           echo "===== PRESENTATION HTML STRUCTURE ====="
