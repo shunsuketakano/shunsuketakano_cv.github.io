@@ -617,6 +617,23 @@ jobs:
           echo "=== generated navbar HTML ==="
           grep -o '.\{0,300\}navbar-toggler-main.\{0,500\}' _site/index.html | head -5 || true
       
+      - name: Inspect actual navbar CSS
+        run: |
+          CORE="$(bundle show al_folio_core)"
+          
+          echo "=== CORE tailwind navbar ==="
+          nl -ba "$CORE/assets/tailwind/app.css" | sed -n '230,430p'
+
+          echo
+          echo "=== GENERATED tailwind navbar ==="
+          grep -oE '.{0,250}navbar-toggler.{0,500}' \
+          _site/assets/css/tailwind.css | head -20 || true
+
+          echo
+          echo "=== GENERATED main.css navbar ==="
+          grep -oE '.{0,250}navbar-toggler.{0,500}' \
+          _site/assets/css/main.css | head -20 || true
+      
       - name: Debug mobile header
         run: |
           echo "=== HEADER FILES ==="
