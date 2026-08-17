@@ -577,6 +577,51 @@ jobs:
           path.write_text(new_text)
           print(f"Patched navbar icon bars: {path}")
           PY
+
+          HEADER="$(bundle show al_folio_core)/_includes/header.liquid"
+          python3 - "$HEADER" <<'PY'
+          from pathlib import Path
+          import sys
+
+          path = Path(sys.argv[1])
+          text = path.read_text()
+
+          marker = "<header>"
+
+          css = """
+          <style>
+          @media (max-width: 575.98px) {
+            #navbar .navbar-toggler-main {
+              display: block !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+              position: relative;
+              z-index: 2000;
+            }
+
+            #navbar .navbar-toggler-main .icon-bar {
+              display: block !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+              width: 22px;
+              height: 2px;
+              margin-bottom: 4px;
+              background-color: var(--global-theme-color) !important;
+              border-radius: 1px;
+            }
+          }
+          </style>
+          """
+
+          if marker not in text:
+            raise SystemExit("ERROR: <header> not found in header.liquid")
+
+          if css.strip() not in text:
+            text = text.replace(marker, marker + css, 1)
+            path.write_text(text)
+
+          print(f"Patched mobile header CSS: {path}")
+          PY
           
           echo "===== PRESENTATION HTML STRUCTURE ====="
           grep -R -n -A5 -B5 "Symposium on Molecular Chirality" _site/presentations/index.html | head -100
