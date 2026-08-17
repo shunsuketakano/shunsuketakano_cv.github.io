@@ -532,7 +532,7 @@ jobs:
             display: block !important;
             width: 22px;
             height: 2px;
-            background-color: var(--global-text-color) !important;
+            background-color: var(--global-theme-color) !important;
             border-radius: 1px;
             margin-bottom: 4px;
             transition: all 0.2s;
