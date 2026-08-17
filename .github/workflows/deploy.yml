@@ -559,6 +559,21 @@ jobs:
             --include="*.scss" --include="*.css" --include="*.js" --include="*.liquid" \
             2>/dev/null | head -150 || true
       
+      - name: Inspect navbar toggle and progress
+        run: |
+          CORE="$(bundle show al_folio_core)"
+
+          echo "=== nav-toggle.js ==="
+          nl -ba "$CORE/assets/js/nav-toggle.js" | sed -n '1,140p'
+
+          echo
+          echo "=== progress-bar.js ==="
+          nl -ba "$CORE/assets/js/progress-bar.js" | sed -n '1,100p'
+
+          echo
+          echo "=== progress CSS ==="
+          nl -ba "$CORE/_sass/_utilities.scss" | sed -n '80,130p'
+    
       - name: Debug mobile header
         run: |
           echo "=== HEADER FILES ==="
