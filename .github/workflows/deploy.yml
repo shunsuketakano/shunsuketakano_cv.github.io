@@ -601,7 +601,22 @@ jobs:
           echo
           echo "=== progress CSS ==="
           nl -ba "$CORE/_sass/_utilities.scss" | sed -n '80,130p'
-    
+
+      - name: Debug generated navbar CSS
+        run: |
+          echo "=== navbar-toggler-main in generated CSS ==="
+          grep -RnoE '.{0,200}navbar-toggler-main.{0,400}' _site/assets/css _site/assets 2>/dev/null \
+            | head -30 || true
+          
+          echo
+          echo "=== navbar-toggler display rules ==="
+          grep -RnoE '.{0,150}navbar-toggler.{0,300}' _site/assets/css _site/assets 2>/dev/null \
+            | head -50 || true
+
+          echo
+          echo "=== generated navbar HTML ==="
+          grep -o '.\{0,300\}navbar-toggler-main.\{0,500\}' _site/index.html | head -5 || true
+      
       - name: Debug mobile header
         run: |
           echo "=== HEADER FILES ==="
