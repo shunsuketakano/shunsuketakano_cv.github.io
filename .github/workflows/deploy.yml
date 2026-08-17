@@ -518,21 +518,15 @@ jobs:
           TAILWIND_APP="$(bundle show al_folio_core)/assets/tailwind/app.css"
           python3 - "$TAILWIND_APP" <<'PY'
           from pathlib import Path
+          import re
           import sys
 
           path = Path(sys.argv[1])
           text = path.read_text()
 
-          marker = '''  .navbar-toggler {
-            padding: 0.25rem 0.75rem;
-            font-size: 1.25rem;
-            line-height: 1;
-            background-color: transparent;
-            border: 0;
-            border-radius: 0.25rem;
-          }'''
+          pattern = r'(\n\s*\.navbar-toggler\s*\{\n(?:.*\n)*?\s*\})'
 
-          addition = marker + '''
+          addition = r'''\1
 
           .navbar-toggler .icon-bar {
             display: block;
@@ -570,10 +564,17 @@ jobs:
             transform: rotate(0);
           }'''
 
-          if marker not in text:
+          new_text, count = re.subn(
+            pattern,
+            addition,
+            text,
+            count=1
+          )
+
+          if count != 1:
             raise SystemExit("ERROR: .navbar-toggler block not found in tailwind/app.css")
 
-          path.write_text(text.replace(marker, addition, 1))
+          path.write_text(new_text)
           print(f"Patched navbar icon bars: {path}")
           PY
           
