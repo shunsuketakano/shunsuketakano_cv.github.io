@@ -270,14 +270,34 @@ jobs:
                 {% else %}{{ entry.month }}{% endcase %}/{% if entry.day %}{{ entry.day | prepend: "0" | slice: -2, 2 }}{% endif %})
             {% endif %}
           {% elsif entry.type == "book" %}
-            {% if entry.series %}{{ entry.series }}{% endif %}
-            {% if entry.number %} {{ entry.number }}{% endif %}
-            {% if entry.edition %}, {{ entry.edition }}版{% endif %}
-            {% if entry.transauthor %}, {{ entry.transauthor }}訳{% endif %}
-            {% if entry.publisher %}, {{ entry.publisher }}{% endif %}
-            {% if entry.address %}, {{ entry.address }}{% endif %}
-            {% if entryyear != "" %} ({{ entryyear | strip }}){% endif %}
-
+            {% assign book_separator = "" %}
+            {% if entry.series %}
+              {{ entry.series }}
+              {% assign book_separator = ", " %}
+            {% endif %}
+            {% if entry.number %}
+              {{ book_separator }}{{ entry.number }}
+              {% assign book_separator = ", " %}
+            {% endif %}
+            {% if entry.edition %}
+              {{ book_separator }}{{ entry.edition }}版
+              {% assign book_separator = ", " %}
+            {% endif %}
+            {% if entry.transauthor %}
+              {{ book_separator }}{{ entry.transauthor }}訳
+              {% assign book_separator = ", " %}
+            {% endif %}
+            {% if entry.publisher %}
+              {{ book_separator }}{{ entry.publisher }}
+              {% assign book_separator = ", " %}
+            {% endif %}
+            {% if entry.address %}
+              {{ book_separator }}{{ entry.address }}
+            {% endif %}
+            {% if entryyear != "" %}
+              ({{ entryyear | strip }})
+            {% endif %}
+            
           {% elsif entry.type == "conference" %}
             {{ entry.booktitle }}
             {% if entry.volume %} {{ entry.volume }}{% endif %}
