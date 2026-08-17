@@ -83,113 +83,87 @@ body {
 /* Responsive content overflow on small screens                              */
 /* -------------------------------------------------------------------------- */
 
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.post,
-.post article,
-.container {
-  min-width: 0;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Normal text keeps horizontal margins and wraps within the viewport. */
-.post article {
-  overflow-wrap: anywhere;
-}
-
-/* Images and figures */
-.post article figure {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
-.post article figure picture {
-  display: block;
-  width: auto;
-  max-width: 100%;
-}
-
-.post article figure img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Mobile */
 @media (max-width: 575.98px) {
-  /*
-   * Keep text inside the normal content column.
-   * Figures may extend to the full viewport width.
-   */
-  .post article {
+  html,
+  body {
     width: 100%;
     max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    overflow-x: hidden;
+  }
+
+  .post,
+  .post article {
+    min-width: 0;
     box-sizing: border-box;
   }
 
+  /* Normal text keeps the original content margins and wraps. */
+  .post article {
+    overflow-wrap: anywhere;
+  }
+
+  /* Images and figures can use the full viewport width. */
   .post article figure {
     width: 100vw;
     max-width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
   }
 
   .post article figure picture {
+    display: block;
     width: max-content;
     max-width: none;
   }
 
   .post article figure img {
+    display: block;
     width: auto;
     min-width: 100vw;
     max-width: none;
+    height: auto;
   }
-}
 
-/* Code blocks */
-.post article pre,
-.post article .highlight {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
+  /* Code blocks scroll inside themselves. */
+  .post article pre,
+  .post article .highlight {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.post article pre {
-  white-space: pre;
-}
+  .post article pre {
+    white-space: pre;
+  }
 
-/* Tables */
-.post article .table-responsive {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
+  /* Tables scroll inside themselves. */
+  .post article .table-responsive,
+  .post article table {
+    max-width: 100%;
+  }
 
-/* Display equations */
-.post article mjx-container[display='true'],
-.post article .MathJax_Display,
-.post article .katex-display {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
+  .post article .table-responsive {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.post article mjx-container[display='true'] {
-  display: block;
+  /* Display equations scroll inside themselves. */
+  .post article mjx-container[display='true'],
+  .post article .MathJax_Display,
+  .post article .katex-display {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .post article mjx-container[display='true'] {
+    display: block;
+  }
 }
