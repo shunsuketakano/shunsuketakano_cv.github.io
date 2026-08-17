@@ -518,26 +518,28 @@ jobs:
           NAVBAR="$(bundle show al_folio_core)/_sass/_navbar.scss"
           python3 - "$NAVBAR" <<'PY'
           from pathlib import Path
+          import re
           import sys
-          
+
           path = Path(sys.argv[1])
           text = path.read_text()
 
-          old = '''    .navbar-toggler-main {
-            margin-left: auto;
-          }'''
+          pattern = r'(\.navbar-toggler-main\s*\{\s*margin-left:\s*auto;)(\s*\})'
 
-          new = '''    .navbar-toggler-main {
-            margin-left: auto;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-          }'''
+          replacement = (
+            r'\1'
+            '\n      display: block !important;'
+            '\n      visibility: visible !important;'
+            '\n      opacity: 1 !important;'
+            r'\2'
+          )
 
-          if old not in text:
-            raise SystemExit("ERROR: mobile navbar toggler block not found")
+          new_text, count = re.subn(pattern, replacement, text, count=1)
+  
+          if count != 1:
+            raise SystemExit("ERROR: .navbar-toggler-main block not found")
 
-          path.write_text(text.replace(old, new, 1))
+          path.write_text(new_text)
           print(f"Patched mobile navbar toggler: {path}")
           PY
           
