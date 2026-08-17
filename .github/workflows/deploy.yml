@@ -514,6 +514,32 @@ jobs:
           --include="*.liquid" \
           --include="*.rb" \
           | head -200
+
+          NAVBAR="$(bundle show al_folio_core)/_sass/_navbar.scss"
+          python3 - "$NAVBAR" <<'PY'
+          from pathlib import Path
+          import sys
+          
+          path = Path(sys.argv[1])
+          text = path.read_text()
+
+          old = '''    .navbar-toggler-main {
+            margin-left: auto;
+          }'''
+
+          new = '''    .navbar-toggler-main {
+            margin-left: auto;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+          }'''
+
+          if old not in text:
+            raise SystemExit("ERROR: mobile navbar toggler block not found")
+
+          path.write_text(text.replace(old, new, 1))
+          print(f"Patched mobile navbar toggler: {path}")
+          PY
           
           echo "===== PRESENTATION HTML STRUCTURE ====="
           grep -R -n -A5 -B5 "Symposium on Molecular Chirality" _site/presentations/index.html | head -100
