@@ -272,27 +272,45 @@ jobs:
           {% elsif entry.type == "book" %}
             {% assign book_separator = "" %}
             {% if entry.series %}
-              {{ entry.series }}
-              {% assign book_separator = ", " %}
+              {% assign book_series = entry.series | strip %}
+              {% if book_series != "" %}
+                {{ book_separator }}{{ book_series }}
+                {% assign book_separator = ", " %}
+              {% endif %}
             {% endif %}
             {% if entry.number %}
-              {{ book_separator }}{{ entry.number }}
-              {% assign book_separator = ", " %}
+              {% assign book_number = entry.number | strip %}
+              {% if book_number != "" %}
+                {{ book_separator }}{{ book_number }}
+                {% assign book_separator = ", " %}
+              {% endif %}
             {% endif %}
             {% if entry.edition %}
-              {{ book_separator }}{{ entry.edition }}版
-              {% assign book_separator = ", " %}
+              {% assign book_edition = entry.edition | strip %}
+              {% if book_edition != "" %}
+                {{ book_separator }}{{ book_edition }}版
+                {% assign book_separator = ", " %}
+              {% endif %}
             {% endif %}
             {% if entry.transauthor %}
-              {{ book_separator }}{{ entry.transauthor }}訳
-              {% assign book_separator = ", " %}
+              {% assign book_transauthor = entry.transauthor | strip %}
+              {% if book_transauthor != "" %}
+                {{ book_separator }}{{ book_transauthor }}訳
+                {% assign book_separator = ", " %}
+              {% endif %}
             {% endif %}
             {% if entry.publisher %}
-              {{ book_separator }}{{ entry.publisher }}
-              {% assign book_separator = ", " %}
+              {% assign book_publisher = entry.publisher | strip %}
+              {% if book_publisher != "" %}
+                {{ book_separator }}{{ book_publisher }}
+                {% assign book_separator = ", " %}
+              {% endif %}
             {% endif %}
             {% if entry.address %}
-              {{ book_separator }}{{ entry.address }}
+              {% assign book_address = entry.address | strip %}
+              {% if book_address != "" %}
+                {{ book_separator }}{{ book_address }}
+              {% endif %}
             {% endif %}
             {% if entryyear != "" %}
               ({{ entryyear | strip }})
