@@ -103,8 +103,7 @@ body {
   overflow-wrap: anywhere;
 }
 
-/* Images and figures: keep the page width fixed, but let oversized figures
-   scroll horizontally within the figure itself. */
+/* Images and figures */
 .post article figure {
   max-width: 100%;
   margin-left: 0;
@@ -115,14 +114,17 @@ body {
 }
 
 .post article figure picture {
-  display: inline-block;
+  display: block;
   width: max-content;
   max-width: none;
 }
 
 .post article figure img {
+  display: block;
   width: auto !important;
+  min-width: 100%;
   max-width: none !important;
+  height: auto;
 }
 
 /* Code blocks: horizontal scrolling only inside the code block. */
