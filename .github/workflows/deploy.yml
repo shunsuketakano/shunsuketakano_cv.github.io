@@ -542,6 +542,23 @@ jobs:
           echo "=== LAYOUT.SCSS ==="
           nl -ba "$CORE/_sass/_layout.scss" | sed -n '1,80p'
     
+      - name: Inspect navbar JS and progress
+        run: |
+          CORE="$(bundle show al_folio_core)"
+
+          echo "=== NAVBAR TOGGLE JS ==="
+          grep -RniE "data-nav-toggle|navbarNav|navbar-toggler-main" \
+            "$CORE" \
+            --include="*.js" --include="*.liquid" \
+            2>/dev/null | head -100 || true
+
+          echo
+          echo "=== PROGRESS CSS / JS ==="
+          grep -RniE "#progress|progress-container|progress-bar|scroll.*progress|progress.*scroll" \
+            "$CORE" \
+            --include="*.scss" --include="*.css" --include="*.js" --include="*.liquid" \
+            2>/dev/null | head -150 || true
+      
       - name: Debug mobile header
         run: |
           echo "=== HEADER FILES ==="
