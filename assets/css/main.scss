@@ -78,3 +78,90 @@ body {
   border-color: var(--global-theme-color);
   text-decoration: none !important;
 }
+
+/* -------------------------------------------------------------------------- */
+/* Responsive content overflow on small screens                              */
+/* -------------------------------------------------------------------------- */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.post,
+.post article,
+.container {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Normal text must stay within the viewport. */
+.post article {
+  overflow-wrap: anywhere;
+}
+
+/* Images and figures: keep the page width fixed, but let oversized figures
+   scroll horizontally within the figure itself. */
+.post article figure {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post article figure picture {
+  display: inline-block;
+  width: max-content;
+  max-width: none;
+}
+
+.post article figure img {
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Code blocks: horizontal scrolling only inside the code block. */
+.post article pre,
+.post article .highlight {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post article pre {
+  white-space: pre;
+}
+
+/* Tables: horizontal scrolling only when the table is wider than the
+   viewport. */
+.post article .table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post article table {
+  max-width: 100%;
+}
+
+/* Display equations rendered by MathJax / KaTeX. */
+.post article mjx-container[display='true'],
+.post article .MathJax_Display,
+.post article .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent MathJax's internal layout from expanding the whole page. */
+.post article mjx-container[display='true'] {
+  display: block;
+}
