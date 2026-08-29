@@ -9,12 +9,15 @@ related_publications: true
 learn_page: true
 ---
 
-Landauの現象論
-├  南部–Goldstoneの定理
-├  強誘電体のLandau-Ginzburg-Devonshire理論
-├  超伝導体のLandau-Ginzburg理論
-└  液晶
-    ├  Nematic相のLandau–de Gennes理論
-    └  Smectic A–C相転移と強誘電液晶
+```mermaid
+graph TD
+    A[Landauの現象論] ---> B[南部–Goldstoneの定理]
+    A ---> C[強誘電体のLandau-Ginzburg-Devonshire理論]
+    A ---> D[超伝導体のLandau-Ginzburg理論]
+    A ---> E[液晶]
+
+    E ---> E1[Nematic相のLandau–de Gennes理論]
+    E ---> E2[Smectic A–C相転移と強誘電液晶]
+```
 
 {% cite LandauLifshitzStat1980 上江州2016 %}
