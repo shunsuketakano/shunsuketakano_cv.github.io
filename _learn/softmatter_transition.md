@@ -16,3 +16,5 @@ Landauの現象論
 └  液晶
     ├  Nematic相のLandau–de Gennes理論
     └  Smectic A–C相転移と強誘電液晶
+
+{% cite LandauLifshitzStat1980 上江州2016 %}
