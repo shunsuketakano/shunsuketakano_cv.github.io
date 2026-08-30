@@ -75,7 +75,7 @@ $$
     \vert\mathbf{M}_{\text{eq}}\vert 
     &= \sqrt{-\frac{a}{b}}
     .
-\end{equation}
+\end{align}
 $$
 
 {% cite LandauLifshitzStat1980 上江州2016 %}
