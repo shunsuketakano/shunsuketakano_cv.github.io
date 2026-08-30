@@ -1,7 +1,7 @@
 ---
 layout: learn
 title: 相転移と対称性
-description: for graduate students or researchers working on condensed matter physics
+description: 相を対称性で特徴付け，相転移挙動をLandauの現象論で理解する．
 img: assets/img/12.jpg
 importance: 1
 category: ソフトマター全般編
@@ -17,7 +17,8 @@ graph LR
     A ---> E[液晶]
 
     E ---> E1[Nematic相のLandau–de Gennes理論]
-    E ---> E2[Smectic A–C相転移と強誘電液晶]
+    E ---> E2[Nematic–Smectic A相転移]
+    E ---> E3[Smectic A–C相転移と強誘電液晶]
 ```
 
 ## Landauの現象論
@@ -77,5 +78,11 @@ $$
     .
 \end{align}
 $$
+
+## 液晶の相転移とLandau理論
+
+### Nematic相のLandau–de Gennes理論
+### Nematic–Smectic A相転移
+### Smectic A–C相転移と強誘電液晶
 
 {% cite LandauLifshitzStat1980 上江州2016 %}
