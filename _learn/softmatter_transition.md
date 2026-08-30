@@ -71,7 +71,7 @@ $$
 \begin{align}
     \min_{\mathbf{M}} f 
     &= f(T < T^\ast, N/V; \mathbf{M} = \mathbf{M}_{\text{eq}}) = - \frac{a^2}{4b}
-    ,
+    ,\\
     \vert\mathbf{M}_{\text{eq}}\vert 
     &= \sqrt{-\frac{a}{b}}
     .
