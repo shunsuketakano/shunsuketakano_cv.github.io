@@ -65,7 +65,7 @@ $$
 $$
 
 $$
-    \vert|\mathbf{M}_{\text{eq}}\vert = \sqrt{-\frac{a}{b}}
+    \vert\mathbf{M}_{\text{eq}}\vert = \sqrt{-\frac{a}{b}}
 $$
 
 {% cite LandauLifshitzStat1980 上江州2016 %}
