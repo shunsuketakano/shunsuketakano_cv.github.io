@@ -27,6 +27,15 @@ body {
   text-align: justify;
 }
 
+/* Minimum gap between text and floated images */
+.post article img[style*="float: right"] {
+  margin-left: 1rem;
+}
+
+.post article img[style*="float: left"] {
+  margin-right: 1rem;
+}
+
 /* Spacing between bibliography items */
 .publications {
   .bibliography {    
