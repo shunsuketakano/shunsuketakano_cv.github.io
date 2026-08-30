@@ -26,10 +26,13 @@ body {
   text-align: justify;
 }
 
-/* Minimum gap between text and floated images */
-.post article img {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+/* Minimum gap between text and profile */
+.post article .profile.float-right {
+  margin-left: 2rem;
+}
+
+.post article .profile.float-left {
+  margin-right: 2rem;
 }
 
 /* Spacing between bibliography items */
