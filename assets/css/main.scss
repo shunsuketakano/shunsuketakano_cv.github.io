@@ -21,6 +21,12 @@ body {
   font-family: var(--font-family);
 }
 
+/* Justify Japanese and English text */
+.post article p,
+.post article li {
+  text-align: justify;
+}
+
 /* Spacing between bibliography items */
 .publications {
   .bibliography {    
