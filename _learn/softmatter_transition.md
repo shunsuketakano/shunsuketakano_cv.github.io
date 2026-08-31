@@ -140,16 +140,24 @@ Nematic相と等方相の相転移を考える．（一軸性）Nematic相は点
 
 $$
 \begin{equation}
-    f_{\text{LdG}} = \frac{A}{2} \text{Tr} Q^2 + \frac{B}{2} \text{Tr} Q^3 + \frac{C}{2} \text{Tr} Q^4
+    f(T,N/V; Q) = \frac{A}{2} \text{Tr} Q^2 + \frac{B}{3} \text{Tr} Q^3 + \frac{C}{4} \left(\text{Tr} Q^2\right)^2
 \end{equation}
 $$
 
-が得られる．ここで，一軸性Nematic相では，$$Q$$テンソルをスカラー秩序変数$$S$$とダイレクタ（極性ベクトル）$$\mathbf{n}$$に分解することが可能である：
+が得られる．これまで見てきた系との最大の違いは，3次項$$\text{Tr}Q^3$$の存在である．偶数次の項からなる現象論的自由エネルギーでは，連続相転移が記述されたが，3次項を含むこの$$f$$は不連続相転移を示す．ここで，一軸性Nematic相では，$$Q$$テンソルをスカラー秩序変数$$S$$とダイレクタ（極性ベクトル）$$\mathbf{n}$$に分解することが可能である：
 
 $$
 \begin{equation}
     Q_{ij} = \frac{3}{2} S \left(n_i n_j - \frac{1}{3}\delta_{ij}\right)
     .
+\end{equation}
+$$
+
+これを$$f$$に代入すると，
+
+$$
+\begin{equation}
+    f = S^2 + S^3 + S^4
 \end{equation}
 $$
 
