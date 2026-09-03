@@ -240,17 +240,20 @@ body {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Display equations scroll inside themselves. */
+    /* Display equations: horizontal scrolling on mobile. */
   .post article mjx-container[display='true'],
   .post article .MathJax_Display,
   .post article .katex-display {
+    display: block;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
-  .post article mjx-container[display='true'] {
-    display: block;
+  /* Keep long MathJax equations at their natural width. */
+  .post article mjx-container[display='true'] > mjx-math {
+    width: max-content;
+    min-width: max-content;
   }
 }
