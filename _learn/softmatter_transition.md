@@ -7,6 +7,7 @@ importance: 1
 category: ソフトマター全般編
 related_publications: true
 learn_page: true
+math: true
 ---
 
 ```mermaid
