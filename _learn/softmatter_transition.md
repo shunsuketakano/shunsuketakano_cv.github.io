@@ -187,8 +187,8 @@ $$
 
 $$
 \begin{equation}
-    P(T<T^\ast) = \sqrt{\frac{1}{b}\frac{\partial a}{\partial T} (T^\ast - T)^\beta}
-    , \beta = 1
+    P(T<T^\ast) = \sqrt{\frac{1}{b}\frac{\partial a}{\partial T}} (T^\ast - T)^\beta
+    , \beta = 0.5
 \end{equation}
 $$
 
