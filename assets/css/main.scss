@@ -241,24 +241,16 @@ body {
   }
 
   /* Display equations: horizontal scrolling on mobile */
-  .post article .MathJax_Display,
   .post article mjx-container[display='true'] {
     display: block;
-    width: 100%;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
   }
 
-  .post article .MathJax_Display > mjx-container {
-    display: block;
-    width: max-content;
-    max-width: none;
-  }
-
-  .post article mjx-container[display='true'] > mjx-math {
-    display: block;
+  .post article mjx-container[display='true'] mjx-math {
     width: max-content;
     max-width: none;
   }
