@@ -28,8 +28,10 @@ body {
 
 /* Improve readability on mobile */
 @media (max-width: 575.98px) {
-  .post article {
-    font-size: 1.0rem;
+  .post article,
+  .post article p,
+  .post article li {
+    font-size: 1.0rem !important;
     line-height: 2.00;
     letter-spacing: 0.02em;
     font-weight: 500;
