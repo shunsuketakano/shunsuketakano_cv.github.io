@@ -148,7 +148,33 @@ $$
 \end{equation}
 $$
 
-を考える．
+を考える．電場印加時には，分極方向と電場印加方向は一致する（$$\hat{\mathbf{P}} = \hat{\mathbf{E}}$$）から，その方向を正にとり$$\mathbf{E} = E \hat{\mathbf{E}}, \mathbf{P} = P \hat{\mathbf{E}}$$と記すことにする．電気感受率$$\chi$$は，電場の変化に対する分極の変化具合
+
+$$
+\begin{equation}
+    \chi = {\varepsilon_0}^{-1} \frac{\partial P}{\partial E}
+\end{equation}
+$$
+
+であるから，上の極小条件を$$E$$で微分する：
+
+$$
+\begin{equation}
+    \left(a + 3 b P^2\right) \frac{\partial P}{\partial E} - 1 = 0
+    .
+\end{equation}
+$$
+
+印加電場が十分に弱いとき，自発分極の大きさは外場フリーの場合とほとんど等しい．特にここでいう電気感受率は$$E\to0$$とういう極限における線形応答を指すことから，高温相では$$P=0$$，低温相では$$P = \sqrt{-\frac{a}{b}}$$を採用することで，
+
+$$
+\begin{align}
+    \chi(T \ge T^\ast) &= + \frac{1}{\varepsilon_0 a}
+    ,\\
+    \chi(T < T^\ast) &= - \frac{1}{2 \varepsilon_0 a}
+    .
+\end{align}
+$$
 
 
 ## 簡単な例：常磁性–強磁性相転移
