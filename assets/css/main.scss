@@ -26,6 +26,16 @@ body {
   text-align: justify;
 }
 
+/* Improve readability on mobile */
+@media (max-width: 575.98px) {
+  .post article {
+    font-size: 1.0rem;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+    font-weight: 450;
+  }
+}
+
 /* Minimum gap between text and profile */
 .post article .profile.float-right {
   margin-left: 3rem;
