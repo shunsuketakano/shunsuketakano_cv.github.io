@@ -240,20 +240,26 @@ body {
     -webkit-overflow-scrolling: touch;
   }
 
-    /* Display equations: horizontal scrolling on mobile. */
-  .post article mjx-container[display='true'],
+  /* Display equations: horizontal scrolling on mobile */
   .post article .MathJax_Display,
-  .post article .katex-display {
+  .post article mjx-container[display='true'] {
     display: block;
+    width: 100%;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Keep long MathJax equations at their natural width. */
-  .post article mjx-container[display='true'] > mjx-math {
+  .post article .MathJax_Display > mjx-container {
+    display: block;
     width: max-content;
-    min-width: max-content;
+    max-width: none;
+  }
+
+  .post article mjx-container[display='true'] > mjx-math {
+    display: block;
+    width: max-content;
+    max-width: none;
   }
 }
