@@ -178,7 +178,7 @@ $$
 
 $$
 \begin{equation}
-    \chi = \chi_\infty + \frac{{\varepsilon_0}^{-1} C}{T - T^\ast}
+    \chi = \chi_\infty + \frac{C}{T - T^\ast}
 \end{equation}
 $$
 
