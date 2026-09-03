@@ -243,15 +243,20 @@ body {
   /* Display equations: horizontal scrolling on mobile */
   .post article mjx-container[display='true'] {
     display: block;
+    width: 100%;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
     white-space: nowrap;
   }
 
   .post article mjx-container[display='true'] mjx-math {
+    display: inline-block;
     width: max-content;
+    min-width: max-content;
     max-width: none;
+    white-space: nowrap;
   }
 }
