@@ -1,0 +1,43 @@
+// learn.liquidの本文内にだけ適用する設定
+.learn-content {
+  
+  // 1. 各見出しの文字サイズと太さで強弱をつける
+  h1, .h1 {
+    font-size: 2.3rem !important;
+    font-weight: 800 !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  h2, .h2 {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    margin-top: 2.2rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  h3, .h3 {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    margin-top: 1.8rem !important;
+    margin-bottom: 1.0rem !important;
+  }
+
+  // 2. 見出しへの自動付番（ナンバリング）
+  counter-reset: h2-counter;
+
+  h2 {
+    counter-reset: h3-counter; // H2が現れるたびにH3のカウントをリセット
+    &::before {
+      counter-increment: h2-counter; // H2を1ずつカウントアップ
+      content: counter(h2-counter) ". "; // 「1. 」のように表示
+    }
+  }
+
+  h3 {
+    &::before {
+      counter-increment: h3-counter; // H3を1ずつカウントアップ
+      content: counter(h2-counter) "." counter(h3-counter) " "; // 「1.1 」のように表示
+    }
+  }
+}
