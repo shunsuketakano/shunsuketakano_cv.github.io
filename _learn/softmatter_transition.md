@@ -206,7 +206,30 @@ $$
 
 に従う．ここに，Curie定数$$C = \left(\varepsilon_0 \frac{\partial a}{\partial T}\right)^{-1}$$である．感受率$$\chi$$は相転移温度$$T^\ast$$に近づくにつれて発散的に増大する．これは，$$T^\ast$$付近において$$f$$の底が平たくなり，同じ印加電場でも大きく分極できるようになるためである．温度依存性の指数$$\gamma = 1$$は，Weissによる平均場近似の帰結と一致する．これは，Landau理論が平均場理論に相当することを示唆する．
 
-次に，比熱を求める．
+次に，比熱を求める．エントロピーは
+
+$$
+\begin{equation}
+    S 
+    = - \frac{\partial f}{\partial T}
+\end{equtation}
+$$
+
+として計算されることから，
+
+$$
+\begin{align}
+    S(T > T^\ast) / V
+    &= 0
+    ,\\
+    S(T < T^\ast) / V 
+    &= \frac{a}{2b} \frac{\partial a}{\partial T}
+    \\
+    &\simeq \frac{1}{2b} \left(\left.\frac{\partial a}{\partial T}\right|_{T=T^\ast}\right)^2 (T - T^\ast)
+\end{align}
+$$
+
+である．
 
 ### 補足：Mermin–Wagnerの定理
 二次元系で自発的な連続対称性の破れが生じ，長距離秩序が形成されることはない．これはMermin–Wagnerの定理として知られている．とはいえ，短距離秩序が形成されることはある．
