@@ -245,7 +245,7 @@ $$
     &= 0
     ,\\
     c_V(T < T^\ast) 
-    &\simeq \frac{1}{2b} \left(\left.\frac{\partial a}{\partial T}\right|_{T=T^\ast}\right)^2 (T / T^\ast - 1)^{-\alpha}
+    &\simeq \frac{T^\ast}{2b} \left(\left.\frac{\partial a}{\partial T}\right|_{T=T^\ast}\right)^2 (T / T^\ast - 1)^{-\alpha}
     ,\hspace{1em} \alpha = 0
 \end{align}
 $$
