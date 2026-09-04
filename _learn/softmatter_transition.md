@@ -142,7 +142,7 @@ $$
 
 $$
 \begin{equation}
-    P(T<T^\ast) = \sqrt{\frac{1}{b}\frac{\partial a}{\partial T}} (T^\ast - T)^\beta
+    P(T<T^\ast) = \sqrt{\frac{1}{b}\frac{\partial a}{\partial T}T^\ast} (1 - T / T^\ast)^\beta
     ,\hspace{1em} \beta = 0.5
 \end{equation}
 $$
@@ -151,7 +151,8 @@ $$
 
 低温相では自発分極の方向としてひとつの$$\hat{\mathbf{P}}$$が出現する．しかし，自由エネルギー的には360度の任意の方向があり得る．このことは，ある$$\hat{\mathbf{P}}$$が出現している状態から任意角度回転させても，これもまた熱平衡状態であることを意味する．つまり，無限小のエネルギーで状態を遷移させることが可能である．一般に，連続対称性が自発的に破れると，無限小のエネルギーで励起可能なモードが発現する．このモードを南部–Goldstoneモードという．南部–Goldstoneモードは素粒子物理学の文脈で提唱されたが，対称性に依拠することから系のスケールに依らず普遍的に現れる．
 
-電気感受率を求める．これは外場応答であるから，自由エネルギーに静電エネルギー項$$-\mathbf{P}\cdot\mathbf{E}$$を付加し，
+### 応答函数
+まず，電気感受率を求める．これは外場応答であるから，自由エネルギーに静電エネルギー項$$-\mathbf{P}\cdot\mathbf{E}$$を付加し，
 
 $$
 \begin{equation}
@@ -198,12 +199,14 @@ $$
 
 $$
 \begin{equation}
-    \chi = \chi_\infty + \frac{C}{\left(T - T^\ast\right)^\gamma}
+    \chi = \chi_\infty + \frac{C / T^\ast}{\left(T / T^\ast - 1\right)^\gamma}
     ,\hspace{1em} \gamma = 1
 \end{equation}
 $$
 
 に従う．ここに，Curie定数$$C = \left(\varepsilon_0 \frac{\partial a}{\partial T}\right)^{-1}$$である．感受率$$\chi$$は相転移温度$$T^\ast$$に近づくにつれて発散的に増大する．これは，$$T^\ast$$付近において$$f$$の底が平たくなり，同じ印加電場でも大きく分極できるようになるためである．温度依存性の指数$$\gamma = 1$$は，Weissによる平均場近似の帰結と一致する．これは，Landau理論が平均場理論に相当することを示唆する．
+
+次に，比熱を求める．
 
 ### 補足：Mermin–Wagnerの定理
 二次元系で自発的な連続対称性の破れが生じ，長距離秩序が形成されることはない．これはMermin–Wagnerの定理として知られている．とはいえ，短距離秩序が形成されることはある．
