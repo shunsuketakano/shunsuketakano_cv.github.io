@@ -212,7 +212,7 @@ $$
 \begin{equation}
     S 
     = - \frac{\partial f}{\partial T}
-\end{equtation}
+\end{equation}
 $$
 
 として計算されることから，
