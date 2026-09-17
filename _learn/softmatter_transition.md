@@ -365,14 +365,29 @@ $$
 \begin{equation}
     \frac{2J+1}{16\pi^2}
     \int_0^{2\pi} d\alpha
-    \int_0^{\pi} \sin{\beta} d\beta
+    \int_0^{\pi} \sin{\beta}\ d\beta
     \int_0^{4\pi} d\gamma \ 
     \left(
-        D^{(J)}_{ij} (\alpha, \beta, \gamma) 
+        D^{(J)}_{mk} (\alpha, \beta, \gamma) 
         \right)^\ast
-    D^{(J')}_{i'j'} (\alpha, \beta, \gamma)
+    D^{(J')}_{m'k'} (\alpha, \beta, \gamma)
     =
-    \delta_{JJ'} \delta_{ii'} \delta_{jj'}
+    \delta_{JJ'} \delta_{mm'} \delta_{kk'}
+\end{equation}
+$$
+
+である {% cite 犬井1985応用群論 上江州2016 %}．
+
+球面調和函数：$$J$$が非負整数であるとき（このときの$$J$$を$$l$$とおく），WignerのD行列の$$k = 0$$を満たす成分は，球面調和函数$$Y^l_m$$に係数倍を除いて等しい：
+
+$$
+\begin{equation}
+    Y^l_m (\beta, \alpha)
+    =
+    \sqrt{\frac{2l + 1}{4\pi}}
+    \left(
+        D^{(l)}_{m0} (\alpha, \beta, \gamma)
+    \right)^\ast
 \end{equation}
 $$
 
