@@ -401,6 +401,16 @@ $$
     \sqrt{\frac{2l + 1}{2} \frac{(l - \vert m\vert)!}{(l + \vert m\vert)!}}
     P_l^{\vert m\vert} (\cos{\theta})
     \frac{e^{i m\phi}}{\sqrt{2\pi}}
+    ,\\
+    P_l^m(t)
+    &=
+    (1 - t^2)^{\frac{m}{2}}
+    \frac{d^m}{dt^m} P_l(t),\ (m \ge 0)
+    ,\\
+    P_l(t)
+    &=
+    \frac{1}{2^l l!} \frac{d^l}{dt^l} (t^2 - 1)^l
+    .
 \end{align}
 $$
 
