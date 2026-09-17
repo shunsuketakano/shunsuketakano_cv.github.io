@@ -432,7 +432,7 @@ $$
 \begin{equation}
     q_{zz}
     =
-    \frac{2}{3} e \vert \mathbf{x}\vert^2 \sqrt{\frac{4\pi}{2l + 1}} Y_l^m
+    \frac{2}{3} \sqrt{\frac{4\pi}{5}} e \vert \mathbf{x}\vert^2  Y_2^0
 \end{equation}
 $$
 
