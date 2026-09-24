@@ -34,13 +34,13 @@ $$
 \end{equation}
 $$
 
-である．ここに，Hamiltonianを$$\hat{H}$$は，
+である．ここに，Hamiltonian$$\hat{H}$$は，
 
 $$
 \begin{equation}
     \hat{H} 
     = \frac{{\hat{p}}^2}{2m} + \hat{V}(\hat{x})
-    = - \frac{{\hbar}^2}{2m} {\partial_x}^2 + V(x)
+    = - \frac{{\hbar}^2}{2m} \partial_x^2 + V(x)
 \end{equation}
 $$
 
@@ -71,7 +71,7 @@ $$
 \end{equation}
 $$
 
-すると，Schr\"odinger方程式は，時間依存部分と空間依存部分に分解される：
+すると，Schrödinger方程式は，時間依存部分と空間依存部分に分解される：
 
 $$
 \begin{align}
