@@ -74,7 +74,7 @@ $$
 すると，Schr\"odinger方程式は，時間依存部分と空間依存部分に分解される：
 
 $$
-\begin{equnarry}
+\begin{eqnarry}
     \frac{d}{dt} U(t)
     &=
     - i \frac{E}{\hbar} U(t)
@@ -83,7 +83,7 @@ $$
     &=
     - \frac{2mE}{\hbar^2} u(x)
     .
-\end{equnarry}
+\end{eqnarry}
 $$
 
 ここに，$$E$$は分離定数と呼ばれ，解$$U(t), u(x)$$に共通の定数である．また，物理的には，エネルギー固有値（Hamiltonianの固有値）に対応する．
