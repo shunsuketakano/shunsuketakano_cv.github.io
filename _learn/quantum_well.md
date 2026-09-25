@@ -264,11 +264,11 @@ $$
 
 $$
 \begin{equation}
-    \psi_n'(t, x) = \exp{\left[i \frac{q}{\hbar} \chi(t, x) \right]} \psi_n(t, x)
+    \psi'(t, x) = \exp{\left[i \frac{q}{\hbar} \chi(t, x) \right]} \psi(t, x)
 \end{equation}
 $$
 
-ここに，$$q$$は電荷であるが，今の議論だけからは電磁気学における電荷と同一であることはわからない．変換した波動函数$$\psi_n'$$に対してもSchrödinger方程式は成立する必要がある．今のままのHamiltonianでは，変換に対して式が不変でないが，以下の再定義があれば不変となる：
+ここに，$$q$$は電荷であるが，今の議論だけからは電磁気学における電荷と同一であることはわからない．変換した波動函数$$\psi'$$に対してもSchrödinger方程式は成立する必要がある．今のままのHamiltonianでは，変換に対して式が不変でないが，以下の再定義があれば不変となる：
 
 $$
 \begin{equation}
@@ -277,7 +277,7 @@ $$
 \end{equation}
 $$
 
-ここに，$$A, \phi$$はゲージ場と称される量であり，以下のように変換する：
+ここに，$$A, \phi$$はゲージ場と称される量である．Hamiltonianが示すように，電荷$$q$$はゲージ場との結合定数である．今の議論だけからは不明だが，ゲージ場$$A, \phi$$が電磁場に対応することから，$$q$$は電荷を表す．また，ゲージ場は以下のように変換する：
 
 $$
 \begin{align}
@@ -285,10 +285,21 @@ $$
     &= A(t, x) + \partial_x \chi(t, x)
     ,\\
     \phi'(t, x)
-    &= \phi(t, x) - \partial_t \phi(t, x)
+    &= \phi(t, x) - \partial_t \chi(t, x)
     .
 \end{align}
 $$
+
+むしろ，上記のように変換することで，Schrödinger方程式は不変となる．このHamiltonianに，ゲージ場（電磁場と解釈して差し支えない）が十分に小さいと仮定すると，
+
+$$
+\begin{equation}
+    \hat{H}
+    \simeq - \frac{\hbar^2}{2m} \partial_x^2 - \frac{q}{m} A \hat{p} + q \phi
+\end{equation}
+$$
+
+のように近似できる．ただし，Coulombゲージ$$\partial_x A = 0$$を選択した．
 
 
 
