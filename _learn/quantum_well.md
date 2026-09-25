@@ -360,10 +360,10 @@ $$
         \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} A_0 \, 
         \frac{2mL}{\pi (m^2 - n^2)}
     \right\vert^2
-    2 \pi 
+    2 \pi \hbar
     \left(
-        \delta \left( \frac{E_m - E_n}{\hbar} - \omega \right)
-        + \delta \left( \frac{E_m - E_n}{\hbar} + \omega \right)
+        \delta \left( E_m - E_n - \hbar \omega \right)
+        + \delta \left( E_m - E_n + \hbar \omega \right)
     \right)
 \end{align}
 $$
