@@ -102,6 +102,9 @@ $$E$$を決める
 
 ### 波動函数の自由度
 
+
+### 解
+
 $$
 \begin{align}
     U_n(t)
@@ -110,10 +113,20 @@ $$
     ,\\
     u_n(x)
     &=
-    \sqrt{\frac{2}{L}} e^{i\theta_n} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
+    e^{i\theta_n} \sqrt{\frac{2}{L}} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
     .
 \end{align}
 $$
+
+$$
+\begin{equation}
+    \psi_n(t, x)
+    =
+    e^{i\theta_n} \sqrt{\frac{2}{L}} \exp{\left[- \frac{E_n}{\hbar} t \right]} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
+\end{equation}
+$$
+
+
 
 ## 固有状態
 
