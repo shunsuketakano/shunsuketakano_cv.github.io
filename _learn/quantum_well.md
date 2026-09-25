@@ -113,8 +113,20 @@ $$
     ,\\
     u_n(x)
     &=
-    e^{i\theta_n} \sqrt{\frac{2}{L}} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
+    e^{i\theta_n} \sqrt{\frac{2}{L}} \sin{\left(\frac{p_n}{\hbar} x\right)}
     .
+\end{align}
+$$
+
+$$
+\begin{align}
+    E_n
+    &=
+    \frac{n^2 \pi^2 \hbar^2}{2 m L^2}
+    ,\\
+    p_n
+    &=
+    \frac{n \pi \hbar}{L}
 \end{align}
 $$
 
@@ -122,10 +134,19 @@ $$
 \begin{equation}
     \psi_n(t, x)
     =
-    e^{i\theta_n} \sqrt{\frac{2}{L}} \exp{\left[- \frac{E_n}{\hbar} t \right]} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
+    e^{i\theta_n} \sqrt{\frac{2}{L}} \exp{\left[- \frac{E_n}{\hbar} t \right]} \sin{\left(\frac{p_n}{\hbar} x\right)}
 \end{equation}
 $$
 
+存在確率密度
+
+$$
+\begin{equation}
+    \vert \psi_n(t, x) \vert^2
+    =
+    \frac{2}{L} \sin^2{\left(\frac{p_n}{\hbar} x\right)}
+\end{equation}
+$$
 
 
 ## 固有状態
