@@ -258,6 +258,38 @@ $$
 
 ## 対称性
 
+### 固有函数のパリティ
+
+### 局所ゲージ対称性
+
+$$
+\begin{equation}
+    \psi_n'(t, x) = \exp{\left[i \frac{q}{\hbar} \chi(t, x) \right]} \psi_n(t, x)
+\end{equation}
+$$
+
+ここに，$$q$$は電荷であるが，今の議論だけからは電磁気学における電荷と同一であることはわからない．変換した波動函数$$\psi_n'$$に対してもSchrödinger方程式は成立する必要がある．今のままのHamiltonianでは，変換に対して式が不変でないが，以下の再定義があれば不変となる：
+
+$$
+\begin{equation}
+    \hat{H} = \frac{1}{2m} \left(\hat{p} - q A\right)^2 + q \phi
+    .
+\end{equation}
+$$
+
+ここに，$$A, \phi$$はゲージ場と称される量であり，以下のように変換する：
+
+$$
+\begin{align}
+    A'(t, x) 
+    &= A(t, x) + \partial_x \chi(t, x)
+    ,\\
+    \phi'(t, x)
+    &= \phi(t, x) - \partial_t \phi(t, x)
+    .
+\end{align}
+$$
+
 
 
 量子電気力学を学ぶ良書としてランダウ・リフシッツ {% cite LandauLifshitzQuantumElectro1980 %} を推奨する．初期の文献として {% cite Heisenberg1927zphys %} を読まれたし．
