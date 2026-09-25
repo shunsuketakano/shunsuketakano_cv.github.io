@@ -331,9 +331,15 @@ $$
     \left\vert \int dt \int dx \ \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
     =
     \left\vert
-        \frac{2}{L} \frac{p_n}{\hbar} \, i \frac{q\hbar}{m} A \, 
+        \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} A \, 
         \int dt \ 
         \exp{\left[i \frac{E_m - E_n}{\hbar} t \right]}
+        \frac{2mL}{\pi (m^2 - n^2)}
+    \right\vert^2
+    =
+    \left\vert
+        \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} A \, 
+        2 \pi \delta \left( \frac{E_m - E_n}{\hbar} \right)
         \frac{2mL}{\pi (m^2 - n^2)}
     \right\vert^2
 \end{equation}
