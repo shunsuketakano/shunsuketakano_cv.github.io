@@ -1,7 +1,7 @@
 ---
 layout: learn
 title: 量子の世界 ：一次元の無限に深い井戸型ポテンシャル
-description: for graduate students or researchers working on condensed matter physics
+description: 量子力学の基本を初歩的な問題を用いて具体的な例で復習する
 img: assets/img/12.jpg
 importance: 1
 category: 基礎編
@@ -40,7 +40,7 @@ $$
 \begin{equation}
     \hat{H} 
     = \frac{{\hat{p}}^2}{2m} + \hat{V}(\hat{x})
-    = - \frac{{\hbar}^2}{2m} \partial_x^2 + V(x)
+    = - \frac{{\hbar}^2}{2m} \partial^2_x + V(x)
 \end{equation}
 $$
 
