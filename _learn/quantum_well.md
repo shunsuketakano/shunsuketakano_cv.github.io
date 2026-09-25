@@ -74,6 +74,7 @@ $$
 すると，Schrödinger方程式は，時間依存部分と空間依存部分に分解される：
 
 $$
+\begin{subequations}
 \begin{align}
     \frac{d}{dt} U(t)
     &=
@@ -84,6 +85,7 @@ $$
     - \frac{2mE}{\hbar^2} u(x)
     .
 \end{align}
+\end{subequations}
 $$
 
 ここに，$$E$$は分離定数と呼ばれ，解$$U(t), u(x)$$に共通の定数である．また，物理的には，エネルギー固有値（Hamiltonianの固有値）に対応する．
@@ -103,6 +105,7 @@ $$E$$を決める
 ### 波動函数の自由度
 
 $$
+\begin{subequations}
 \begin{align}
     U_n(t)
     &=
@@ -113,6 +116,7 @@ $$
     \sqrt{\frac{2}{L}}} e^{i\theta_n} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
     .
 \end{align}
+\end{subequations}
 $$
 
 ## 固有状態
