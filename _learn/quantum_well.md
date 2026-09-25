@@ -173,12 +173,14 @@ $$
 \begin{equation}
     H
     =
-    \begin{array}{cccc}
-        E_1 &   &   &   \\
-            &   \ddots  &   &   \\
-            &   &   E_n &   \\
-            &   &   &   \ddots
-    \end{array}
+    \left(
+        \begin{array}{cccc}
+            E_1 &   &   &   \\
+                &   \ddots  &   &   \\
+                &   &   E_n &   \\
+                &   &   &   \ddots
+        \end{array}
+    \right)
 \end{equation}
 $$
 
@@ -192,6 +194,7 @@ $$
 $$
 
 ここに，$$f_1, \dots, f_n, \dots$$は展開係数である．
+
 
 ### 運動量固有値
 
