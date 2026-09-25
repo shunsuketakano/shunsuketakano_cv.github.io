@@ -136,7 +136,7 @@ $$
 \begin{equation}
     \psi_n(t, x)
     =
-    e^{i\theta_n} \sqrt{\frac{2}{L}} \exp{\left[- \frac{E_n}{\hbar} t \right]} \sin{\left(\frac{p_n}{\hbar} x\right)}
+    e^{i\theta_n} \sqrt{\frac{2}{L}} \exp{\left[- i \frac{E_n}{\hbar} t \right]} \sin{\left(\frac{p_n}{\hbar} x\right)}
 \end{equation}
 $$
 
@@ -303,11 +303,18 @@ $$
 
 $$
 \begin{equation}
-    \left\vert \int dt \int dx \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert
+    \left\vert \int dt \int dx \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
+    =
+    \left\vert
+        \int dt \int dx
+        e^{-i\theta_m} \sqrt{\frac{2}{L}} \exp{\left[+ i \frac{E_m}{\hbar} t \right]} \sin{\left(\frac{p_m}{\hbar} x\right)}
+        \, i \frac{q\hbar}{m} A \partial_x \, 
+        e^{i\theta_n} \sqrt{\frac{2}{L}} \exp{\left[- \frac{E_n}{\hbar} t \right]} \sin{\left(\frac{p_n}{\hbar} x\right)}\psi_n 
+    \right\vert^2
 \end{equation}
 $$
 
-に比例する．
+に比例する．始状態$$\psi_n$$から終状態$$\psi_m$$への遷移を考えている．
 
 
 
