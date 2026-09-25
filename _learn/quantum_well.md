@@ -102,6 +102,19 @@ $$E$$を決める
 
 ### 波動函数の自由度
 
+$$
+\begin{align}
+    U_n(t)
+    &=
+    \exp{\left[- \frac{E_n}{\hbar} t \right]}
+    ,\\
+    u_n(x)
+    &=
+    \sqrt{\frac{2}{L}}} e^{i\theta_n} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
+    .
+\end{align}
+$$
+
 ## 固有状態
 
 ### エネルギー固有値
@@ -110,17 +123,45 @@ $$E$$を決める
 
 ### 運動量固有値
 
-観測される運動量は##\pm p_n$$であり，正負は等確率で現れる．正味$$\langle p \rangle = 0$$である．
+観測される運動量は$$\pm p_n$$であり，正負は等確率で現れる．正味$$\langle p \rangle = 0$$である．
 
 ### 固有状態の直交性と完全性
 
 ## 不確定性関係
 
-### 運動量の不確定性
+Heisenbergの不確定性関係
+$$
+\begin{equation}
+    \Delta x \Delta p \le \frac{\hbar}{2}
+\end{equation}
+$$
+
+Schrödinger描像では，不確定性関係は「定理」である．しかし，Heisenberg描像では不確定性関係を要請することで量子化する．
 
 ### 座標の不確定性
 
+$$
+\begin{equation}
+    \Delta x
+    = \sqrt{\langle x^2 \rangle - \langle x \rangle^2}
+    = \sqrt{\frac{1}{12} - \frac{1}{2 \pi^2 n^2}} a
+\end{equation}
+$$
+
+### 運動量の不確定性
+
+$$
+\begin{equation}
+    \Delta p
+    = \sqrt{\langle p^2 \rangle - \langle p \rangle^2}
+    = \frac{n \pi \hbar}{a}
+\end{equation}
+$$
+
+
 ## 対応原理
+
+量子数の大きな状態は，古典系に漸近する
 
 ## 対称性
 
