@@ -295,11 +295,11 @@ $$
 $$
 \begin{equation}
     \hat{H}
-    \simeq - \frac{\hbar^2}{2m} \partial_x^2 - \frac{q}{m} A \hat{p} + q \phi
+    \simeq - \frac{\hbar^2}{2m} \partial_x^2 + i \frac{q \hbar}{m} A \partial_x + q \phi
 \end{equation}
 $$
 
-のように近似できる．ただし，Coulombゲージ$$\partial_x A = 0$$を選択した．
+のように近似できる．ただし，Coulombゲージ$$\partial_x A = 0$$を選択した．今考えている粒子が電荷を持っている場合，井戸型ポテンシャル$$V$$を静電ポテンシャル$$\phi$$にくりこむことができる．
 
 
 
