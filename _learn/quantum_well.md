@@ -299,7 +299,15 @@ $$
 \end{equation}
 $$
 
-のように近似できる．ただし，Coulombゲージ$$\partial_x A = 0$$を選択した．今考えている粒子が電荷を持っている場合，井戸型ポテンシャル$$V$$を静電ポテンシャル$$\phi$$にくりこむことができる．
+のように近似できる．ただし，Coulombゲージ$$\partial_x A = 0$$を選択した．今考えている粒子が電荷を持っている場合，井戸型ポテンシャル$$V$$を静電ポテンシャル$$\phi$$にくりこむことができる．すると，これまで議論してきたHamiltonianとの違いは，ゲージ場との線型の結合を表す右辺第2項である．Fermiの黄金律によると，遷移確率は
+
+$$
+\begin{equation}
+    \left\vert \int dt \int dx \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert
+\end{equation}
+$$
+
+に比例する．
 
 
 
