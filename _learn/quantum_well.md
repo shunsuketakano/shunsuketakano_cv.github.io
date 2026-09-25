@@ -304,18 +304,40 @@ $$
 $$
 \begin{equation}
     \left\vert \int dt \int dx \ \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
+\end{equation}
+$$
+
+に比例する．始状態$$\psi_n$$から終状態$$\psi_m$$への遷移を考えている．今の問題設定において具体的に計算すると
+
+$$
+\begin{equation}
+    \left\vert \int dt \int dx \ \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
     =
     \left\vert
         \frac{2}{L} \frac{p_n}{\hbar} \, i \frac{q\hbar}{m} A \, 
-        \int dt \int dx \ 
+        \int dt \ 
         \exp{\left[i \frac{E_m - E_n}{\hbar} t \right]}
+        \int dx \ 
         \sin{\left(\frac{p_m}{\hbar} x\right)}
         \cos{\left(\frac{p_n}{\hbar} x\right)} 
     \right\vert^2
 \end{equation}
 $$
 
-に比例する．始状態$$\psi_n$$から終状態$$\psi_m$$への遷移を考えている．
+となる．ここで，$$m, n$$の偶奇により場合わけがある．$$m - n$$が偶数のとき，$$x$$による積分は$$0$$となる．しかし，$$m - n$$が奇数となるとき，積分は有限の値になり
+
+$$
+\begin{equation}
+    \left\vert \int dt \int dx \ \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
+    =
+    \left\vert
+        \frac{2}{L} \frac{p_n}{\hbar} \, i \frac{q\hbar}{m} A \, 
+        \int dt \ 
+        \exp{\left[i \frac{E_m - E_n}{\hbar} t \right]}
+        \frac{2mL}{\pi (m^2 - n^2)}
+    \right\vert^2
+\end{equation}
+$$
 
 
 
