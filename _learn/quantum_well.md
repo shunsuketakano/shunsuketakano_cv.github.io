@@ -205,7 +205,17 @@ $$
 
 ### 運動量固有値
 
-観測される運動量は$$\pm p_n$$であり，正負は等確率で現れる．正味$$\langle p \rangle = 0$$である．
+運動量演算子$$\hat{p} = -i\hbar\partial_x$$の固有函数は，Schrödinger方程式の解ではなく，基本解$$\exp{\left[\pm i \frac{p}{\hbar} x\right]}$$である：
+
+$$
+\begin{equation}
+    \hat{p} \exp{\left[\pm i \frac{p}{\hbar} x\right]}
+    = \pm p \exp{\left[\pm i \frac{p}{\hbar} x\right]}
+    .
+\end{equation}
+$$
+
+いま，ポテンシャルに束縛されていると運動量$$p$$が量子化されるため，取りうる値は$$p_n$$に限られる．観測される運動量は$$\pm p_n$$であり，正負は等確率で現れる．正味$$\langle p \rangle = 0$$である．
 
 ### 固有状態の直交性と完全性
 
