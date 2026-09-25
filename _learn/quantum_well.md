@@ -110,7 +110,7 @@ $$
     ,\\
     u_n(x)
     &=
-    \sqrt{\frac{2}{L}}} e^{i\theta_n} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
+    \sqrt{\frac{2}{L}} e^{i\theta_n} \sin{\left(\frac{p_n}{\hbar} x - \frac{n \pi}{2}\right)}
     .
 \end{align}
 $$
