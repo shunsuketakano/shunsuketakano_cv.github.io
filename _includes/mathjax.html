@@ -1,0 +1,17 @@
+<script>
+  window.MathJax = {
+    tex: {
+      tags: 'ams',                // 自動連番を有効化
+      packages: {'[+]': ['ams']}, // subequationsを使えるようにする
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://jsdelivr.net"></script>

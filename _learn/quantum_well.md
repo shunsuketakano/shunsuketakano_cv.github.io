@@ -134,9 +134,10 @@ $$
 ## 不確定性関係
 
 Heisenbergの不確定性関係
+
 $$
 \begin{equation}
-    \Delta x \Delta p \le \frac{\hbar}{2}
+    \Delta x \, \Delta p \le \frac{\hbar}{2}
 \end{equation}
 $$
 
@@ -148,7 +149,7 @@ $$
 \begin{equation}
     \Delta x
     = \sqrt{\langle x^2 \rangle - \langle x \rangle^2}
-    = \sqrt{\frac{1}{12} - \frac{1}{2 \pi^2 n^2}} a
+    = \sqrt{\frac{1}{12} - \frac{1}{2 \pi^2 n^2}} L
 \end{equation}
 $$
 
@@ -158,7 +159,7 @@ $$
 \begin{equation}
     \Delta p
     = \sqrt{\langle p^2 \rangle - \langle p \rangle^2}
-    = \frac{n \pi \hbar}{a}
+    = \frac{n \pi \hbar}{L}
 \end{equation}
 $$
 
