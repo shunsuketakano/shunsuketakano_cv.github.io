@@ -306,10 +306,11 @@ $$
     \left\vert \int dt \int dx \ \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
     =
     \left\vert
+        \frac{2}{L} 
         \int dt \int dx \ 
-        e^{-i\theta_m} \sqrt{\frac{2}{L}} \exp{\left[+ i \frac{E_m}{\hbar} t \right]} \sin{\left(\frac{p_m}{\hbar} x\right)}
+        \exp{\left[+ i \frac{E_m}{\hbar} t \right]} \sin{\left(\frac{p_m}{\hbar} x\right)}
         \, i \frac{q\hbar}{m} A \partial_x \, 
-        e^{i\theta_n} \sqrt{\frac{2}{L}} \exp{\left[- \frac{E_n}{\hbar} t \right]} \frac{p_n}{\hbar} \cos{\left(\frac{p_n}{\hbar} x\right)}\psi_n 
+        \exp{\left[- i \frac{E_n}{\hbar} t \right]} \frac{p_n}{\hbar} \cos{\left(\frac{p_n}{\hbar} x\right)} 
     \right\vert^2
 \end{equation}
 $$
