@@ -167,7 +167,7 @@ $$
 \end{equation}
 $$
 
-後述するように，$$u_n$$は直交基底となる（今の場合は完全正規直交基底になる）．基底函数の組$$\{u_1, \dots, u_n, \dots\}$$を定義すると，Hamiltonianは行列で表示することができる：
+後述するように，$$u_n$$は直交基底となる（今の場合は完全正規直交基底になる）．基底函数の組み$$\{u_1, \dots, u_n, \dots\}$$を定義すると，Hamiltonianは行列で表示することができる：
 
 $$
 \begin{equation}
@@ -181,6 +181,17 @@ $$
     \end{array}
 \end{equation}
 $$
+
+任意の函数$$f(x)$$は基底関数の組みで展開される：
+
+$$
+\begin{equation}
+    f(x) = f_1 u_1(x) + \cdots + f_n u_n(x) + \cdots
+    .
+\end{equation}
+$$
+
+ここに，$$f_1, \dots, f_n, \dots$$は展開係数である．
 
 ### 運動量固有値
 
