@@ -307,19 +307,30 @@ $$
 \end{equation}
 $$
 
-に比例する．始状態$$\psi_n$$から終状態$$\psi_m$$への遷移を考えている．今の問題設定において具体的に計算すると
+に比例する．始状態$$\psi_n$$から終状態$$\psi_m$$への遷移を考えている．光学遷移では電磁場の空間不均一さは十分に小さいことから，ゲージ場$$A(t, x)$$は空間依存性を無視し，さらに簡単のため単一角振動数$$\omega$$で時間変化すると仮定する：
+
+$$
+\begin{equation}
+    A(t, x)
+    = A_0 e^{-i\omega t} + A_0^\ast e^{+i\omega t}
+    .
+\end{equation}
+$$
+
+今の問題設定において具体的に計算すると
 
 $$
 \begin{equation}
     \left\vert \int dt \int dx \ \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
     =
     \left\vert
-        \frac{2}{L} \frac{p_n}{\hbar} \, i \frac{q\hbar}{m} A \, 
+        \frac{2}{L} \frac{p_n}{\hbar} \, i \frac{q\hbar}{m} \, 
         \int dt \ 
+        \left( A_0 e^{-i\omega t} + A_0^\ast e^{+i\omega t} \right)
         \exp{\left[i \frac{E_m - E_n}{\hbar} t \right]}
         \int dx \ 
         \sin{\left(\frac{p_m}{\hbar} x\right)}
-        \cos{\left(\frac{p_n}{\hbar} x\right)} 
+        \cos{\left(\frac{p_n}{\hbar} x\right)}
     \right\vert^2
 \end{equation}
 $$
@@ -327,24 +338,34 @@ $$
 となる．ここで，$$m, n$$の偶奇により場合わけがある．$$m - n$$が偶数のとき，$$x$$による積分は$$0$$となる．しかし，$$m - n$$が奇数となるとき，積分は有限の値になり
 
 $$
-\begin{equation}
+\begin{align}
+    &\hspace{1.1em}
     \left\vert \int dt \int dx \ \psi_m^\ast \, i \frac{q\hbar}{m} A \partial_x \, \psi_n \right\vert^2
-    =
+    \\
+    &=
     \lim_{T \to \infty}
     \frac{1}{T}
     \left\vert
-        \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} A \, 
+        \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} \, 
         \int_0^T dt \ 
-        \exp{\left[i \frac{E_m - E_n}{\hbar} t \right]}
+        \left(
+            A_0 \exp{\left[i \frac{E_m - E_n}{\hbar} t - i\omega t \right]}
+            + A_0^\ast \exp{\left[i \frac{E_m - E_n}{\hbar} t + i\omega t \right]}
+        \right)
         \frac{2mL}{\pi (m^2 - n^2)}
     \right\vert^2
-    =
+    \\
+    &=
     \left\vert
-        \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} A \, 
+        \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} A_0 \, 
         \frac{2mL}{\pi (m^2 - n^2)}
     \right\vert^2
-    2 \pi \delta \left( \frac{E_m - E_n}{\hbar} \right)
-\end{equation}
+    2 \pi 
+    \left(
+        \delta \left( \frac{E_m - E_n}{\hbar} - \omega \right)
+        + \delta \left( \frac{E_m - E_n}{\hbar} + \omega \right)
+    \right)
+\end{align}
 $$
 
 
