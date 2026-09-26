@@ -357,14 +357,14 @@ $$
     \\
     &=
     \left\vert
-        \frac{2}{L} \frac{n \pi}{L} \, i \frac{q\hbar}{m} A_0 \, 
-        \frac{2mL}{\pi (m^2 - n^2)}
+        \frac{1}{L} \, i \frac{q\hbar}{m} A_0 \, 
+        \frac{4mn}{m^2 - n^2}
     \right\vert^2
     2 \pi \hbar
-    \left(
+    \left[
         \delta \left( E_m - E_n - \hbar \omega \right)
         + \delta \left( E_m - E_n + \hbar \omega \right)
-    \right)
+    \right]
 \end{align}
 $$
 
