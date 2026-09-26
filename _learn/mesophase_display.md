@@ -10,6 +10,7 @@ learn_page: true
 ---
 
 \textbf{【ネタバレについて】}本稿では『Dr.STONE』S4 E34 "COUNTDOWN" {% cite DrSTONE_S4_2025 %}の内容に言及しているため，ネタバレを含む．なお，本稿での言及内容は，稲垣理一郎・Boichiによる漫画原作ではなく，アニメ{% cite DrSTONE_S4_2025 %}の映像・音声表現に基づく．
+
 導波効果（Berry位相）
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
