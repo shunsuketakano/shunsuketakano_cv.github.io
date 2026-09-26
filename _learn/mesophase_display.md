@@ -9,7 +9,7 @@ related_publications: true
 learn_page: true
 ---
 
-\textbf{【ネタバレについて】}本稿では『Dr.STONE』S4 E34 "COUNTDOWN" {% cite DrSTONE_S4_2025 %}の内容に言及しているため，ネタバレを含む．なお，本稿での言及内容は，稲垣理一郎・Boichiによる漫画原作ではなく，アニメ{% cite DrSTONE_S4_2025 %}の映像・音声表現に基づく．
+**【本稿における『Dr.STONE』の引用とご注意】** 本稿は『Dr.STONE』の内容に言及するネタバレを含む．なお，漫画原作（稲垣理一郎・Boichi）ではなく，アニメ版『Dr.STONE SCIENCE FUTURE』（S4 E34 "COUNTDOWN"）{% cite DrSTONE_S4_2025 %}の映像・音声表現に基づく．
 
 導波効果（Berry位相）
 Every project has a beautiful feature showcase page.
