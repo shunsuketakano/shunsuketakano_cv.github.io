@@ -15,7 +15,7 @@ learn_page: true
 
 DSM方式{% cite Heilmeier1968ApplPhysLett %}
 
-TN方式{% cite Schadt1971ApplPhysLett %}
+TN方式{% cite Fergason1971US3731986 Schadt1971ApplPhysLett %}
 
 VA方式{% cite Schiekel1971ApplPhysLett %}
 
