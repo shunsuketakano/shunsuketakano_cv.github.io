@@ -13,6 +13,12 @@ learn_page: true
 
 導波効果（Berry位相）
 
+DSM方式{% cite Heilmeier1968ApplPhysLett %}
+
+TN方式{% cite Schadt1971ApplPhysLett %}
+
+VA方式{% cite Schiekel1971ApplPhysLett %}
+
 配向のメカニズムは不明な点も多い {% cite 木村宗弘2024日本液晶学会 %}．
 ガラスの表面を紙で擦ると配向{% cite Mauguin1911 %}するが，電子顕微鏡で見ても表面に傷はついていない{% cite 液晶の化学 %}．
 Every project has a beautiful feature showcase page.
