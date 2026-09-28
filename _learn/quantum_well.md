@@ -357,8 +357,7 @@ $$
     \\
     &=
     \left\vert
-        \frac{1}{L} \, i \frac{q\hbar}{m} A_0 \, 
-        \frac{4mn}{m^2 - n^2}
+        \frac{q\hbar}{ML} \frac{4mn}{m^2 - n^2} A_0
     \right\vert^2
     2 \pi \hbar
     \left[
@@ -367,6 +366,8 @@ $$
     \right]
 \end{align}
 $$
+
+である．ここに，粒子の質量を$$m \mapsto M$$と書き換えた．
 
 
 
