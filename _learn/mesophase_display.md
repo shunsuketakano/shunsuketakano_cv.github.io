@@ -13,7 +13,7 @@ learn_page: true
 >
 > 本稿は『Dr.STONE』の内容に言及する等のネタバレを含む．なお，漫画原作（稲垣理一郎・Boichi）ではなく，アニメ版『Dr.STONE SCIENCE FUTURE』（S4 E34 "COUNTDOWN"）{% cite DrSTONE_S4_2025 %}の映像・音声表現に基づく．
 
-導波効果（Berry位相）
+導波効果（Berry位相）液晶ディスプレイの仕組みを平易に説明する．
 
 ## 液晶とは（復習）
 詳しくは，別のページへ．
@@ -44,7 +44,11 @@ TN方式{% cite Fergason1971US3731986 Schadt1971ApplPhysLett %}
 
 VA方式{% cite Schiekel1971ApplPhysLett %}
 
+セグメント方式とドットマトリックス方式
+
 ### TN方式と導波効果
+
+ノーマリーホワイトモード　ノーマリーブラックモード
 
 ### Frederiks転移
 TN方式はFrederiks（フレデリクス）転移{% cite Frederiks1927ZPhysik %}を使う．Frederiksは，Fréederickszとも綴られる．
