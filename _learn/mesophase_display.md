@@ -15,9 +15,6 @@ learn_page: true
 
 導波効果（Berry位相）
 
-<details class="spoiler">
-  <summary>Spoiler — クリックして表示</summary>
-
 ## 液晶とは（復習）
 詳しくは，別のページへ．
 本来的な意味では，物質名ではなくて相状態の名称．結晶相のような異方性と，液相のようの流動性を併せ持つことから，結晶相と液相から一文字ずつ借用して「液晶」と称される．英語では "liquid crystal" といい，液晶を発見したひとりであるLehmann（レーマン）による（当時の）ドイツ語での命名 "der flüssige Krystall"{% cite Lehmann1900 %}の訳語である．液晶は「中間相」や "mesophase" とも称される．
@@ -57,7 +54,6 @@ TN方式はFrederiks（フレデリクス）転移{% cite Frederiks1927ZPhysik %
 ### セルの作製
 スペーサ　透明電極　「サンドイッチする」は学術的に正しい専門用語　液晶の導入は，セル組みの後で等方相にて（流動配向を防ぐ）
 
-</details>
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
