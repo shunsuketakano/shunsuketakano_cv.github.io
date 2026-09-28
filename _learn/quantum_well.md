@@ -352,7 +352,7 @@ $$
             A_0 \exp{\left[i \frac{E_m - E_n}{\hbar} t - i\omega t \right]}
             + A_0^\ast \exp{\left[i \frac{E_m - E_n}{\hbar} t + i\omega t \right]}
         \right)
-        \frac{2mL}{\pi (m^2 - n^2)}
+        \frac{2ML}{\pi (m^2 - n^2)}
     \right\vert^2
     \\
     &=
