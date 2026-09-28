@@ -14,23 +14,51 @@ learn_page: true
 
 導波効果（Berry位相）
 
+## 液晶とは（復習）
+詳しくは，別のページへ．
+本来的な意味では，物質名ではなくて相状態の名称．結晶相のような異方性と，液相のようの流動性を併せ持つことから，結晶相と液相から一文字ずつ借用して「液晶」と称される．英語では "liquid crystal" といい，液晶を発見したひとりであるLehmann（レーマン）によるドイツ語での命名 "flüssige Krystal"の訳語である．液晶は「中間相」や "mesophase" とも称される．
+
+### 代表的な液晶材料
+MBBA　Schiff塩基であるため，水分が存在するとanisaldehyde（アニスアルデヒド）と<i>p</i>-<i>n</i>-butylaniline（パラ-ノルマル-ブチルアニリン）に加水分解される．さらに，<i>p</i>-<i>n</i>-butylanilineは酸化されやすく，光や酸素の存在下で重合が進行し，試料の変色を引き起こす．加水分解や酸化で生じた不純物の影響により，MBBAは相転移温度が低下しがちな上に，黄ばみがちである．特に液晶ディスプレイでは，液晶試料に光が照射され，しかも電場印加の際に電極表面で電解酸化が生じるので，化学的に不安定なMBBAには過酷な環境である．
+
+## 配向技術
+配向のメカニズムは不明な点も多いが，有力とされる候補を3つ挙げる{% cite 古川顕治1994日本化学会 廣嶋綱紀2024日本液晶学会 %}．
+
+### 極角を決める臨界表面張力の効果
+臨界表面張力で決まるという経験則{% cite Dubois1976JApplPhys %}あり．MBBAはガラスとの双極子相互作用により水平配向するため，カップリング剤等で表面張力を下げると分散力が支配的となり垂直配向に移行する{% cite Naemura1980JApplPhys %}．
+CTABやSDSといった界面活性剤は垂直配向剤になる．個人的には，臨界表面張力の描像よりも，剣山のように突き出た分子鎖に液晶が突き刺さることで垂直は移行するのではと思う．
+
+### 方位角を決める表面形状の効果
+ガラスの表面を紙で擦ると配向{% cite Mauguin1911BullSocfrMineral %}するが，電子顕微鏡で見ても表面に傷はついていない{% cite 古川顕治1994日本化学会 %}．ただ，ダイアモンドペーストでガラス表面に傷をつけたり{% cite Berreman1972PhysRevLett %}，グレーティングで細かい溝を切ったりすると{% cite Flanders1978ApplPhysLett %}，溝の方向に沿って液晶分子が配向する．
+
+### 方位角を決める配向分子鎖の効果
+高分子材料の配向膜をラビングすると，膜が延伸されて分子鎖が配向するらしい．
+
+
+## 駆動方式
+
 DSM方式{% cite Heilmeier1968ApplPhysLett %}
 
 TN方式{% cite Fergason1971US3731986 Schadt1971ApplPhysLett %}
 
 VA方式{% cite Schiekel1971ApplPhysLett %}
 
-## 配向技術
-配向のメカニズムは不明な点も多いが，有力とされる候補を3つ挙げる{% cite 古川顕治1994日本化学会 廣嶋綱紀2024日本液晶学会 %}．
+### TN方式と導波効果
 
-### 極角
-臨界表面張力で決まるという経験則{% cite Dubois1976JApplPhys %}あり．MBBAはガラスとの双極子相互作用により水平配向するため，カップリング剤等で表面張力を下げると分散力が支配的となり垂直配向に移行する{% cite Naemura1980JApplPhys %}．
+### Frederiks転移
+TN方式はFrederiks（フレデリクス）転移{% cite Frederiks1927ZPhysik %}を使う．Frederiksは，Fréederickszとも綴られる．
 
-### 方位角
-ガラスの表面を紙で擦ると配向{% cite Mauguin1911BullSocfrMineral %}するが，電子顕微鏡で見ても表面に傷はついていない{% cite 古川顕治1994日本化学会 %}．ただ，ダイアモンドペーストでガラス表面に傷をつけたり{% cite Berreman1972PhysRevLett %}，グレーティングで細かい溝を切ると{% cite Flanders1978ApplPhysLett %}，溝の方向に沿って配向する．
+### キラリティ
+
+### セルの作製
+スペーサ　透明電極　「サンドイッチする」は学術的に正しい専門用語　液晶の導入は，セル組みの後で等方相にて（流動配向を防ぐ）
+
+
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
+
+
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
