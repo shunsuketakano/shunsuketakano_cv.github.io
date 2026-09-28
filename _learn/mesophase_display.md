@@ -21,13 +21,13 @@ TN方式{% cite Fergason1971US3731986 Schadt1971ApplPhysLett %}
 VA方式{% cite Schiekel1971ApplPhysLett %}
 
 ## 配向技術
-配向のメカニズムは不明な点も多い {% cite 古川顕治1994日本化学会 廣嶋綱紀2024日本液晶学会 %}．
+配向のメカニズムは不明な点も多いが，有力とされる候補を3つ挙げる{% cite 古川顕治1994日本化学会 廣嶋綱紀2024日本液晶学会 %}．
 
 ### 極角
 臨界表面張力で決まるという経験則{% cite Dubois1976JApplPhys %}あり．MBBAはガラスとの双極子相互作用により水平配向するため，カップリング剤等で表面張力を下げると分散力が支配的となり垂直配向に移行する{% cite Naemura1980JApplPhys %}．
 
 ### 方位角
-ガラスの表面を紙で擦ると配向{% cite Mauguin1911 %}するが，電子顕微鏡で見ても表面に傷はついていない{% cite 古川顕治1994日本化学会 %}．ただ，ダイアモンドペーストでガラス表面に傷をつけたり{% cite Berreman1972PhysRevLett %}，グレーティングで細かい溝を切ると{% cite Flanders1978ApplPhysLett %}，溝の方向に沿って配向する．
+ガラスの表面を紙で擦ると配向{% cite Mauguin1911BullSocfrMineral %}するが，電子顕微鏡で見ても表面に傷はついていない{% cite 古川顕治1994日本化学会 %}．ただ，ダイアモンドペーストでガラス表面に傷をつけたり{% cite Berreman1972PhysRevLett %}，グレーティングで細かい溝を切ると{% cite Flanders1978ApplPhysLett %}，溝の方向に沿って配向する．
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
