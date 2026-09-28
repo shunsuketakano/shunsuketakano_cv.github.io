@@ -166,6 +166,36 @@ body {
   }
 }
 
+
+/* ======================================================== */
+/* Spoiler blocks                                           */
+/* ======================================================== */
+
+.learn-content details.spoiler {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+
+  background: #f2f2f2;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.5rem;
+
+  color: var(--global-text-color);
+}
+
+html[data-theme="dark"] .learn-content details.spoiler {
+  background: #2a2a2a;
+  border-color: #444444;
+}
+
+.learn-content details.spoiler summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.learn-content details.spoiler[open] summary {
+  margin-bottom: 1rem;
+}
+
 /* ======================================================== */
 /* Theorem-like blocks                                     */
 /* ======================================================== */
