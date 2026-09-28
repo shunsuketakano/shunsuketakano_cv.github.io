@@ -166,6 +166,34 @@ body {
   }
 }
 
+/* ======================================================== */
+/* Theorem-like blocks                                      */
+/* ======================================================== */
+
+:root {
+  --theorem-bg: #f2f2f2;
+}
+
+html[data-theme="dark"] {
+  --theorem-bg: #2a2a2a;
+}
+
+.learn-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+
+  background-color: var(--theorem-bg);
+  border: 1px solid var(--global-divider-color);
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0.5rem;
+
+  color: var(--global-text-color);
+}
+
+.learn-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 /* -------------------------------------------------------------------------- */
 /* Responsive content overflow on small screens                              */
 /* -------------------------------------------------------------------------- */
