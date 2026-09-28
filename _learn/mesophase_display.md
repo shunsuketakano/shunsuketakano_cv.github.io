@@ -20,7 +20,7 @@ learn_page: true
 本来的な意味では，物質名ではなくて相状態の名称．結晶相のような異方性と，液相のようの流動性を併せ持つことから，結晶相と液相から一文字ずつ借用して「液晶」と称される．英語では "liquid crystal" といい，液晶を発見したひとりであるLehmann（レーマン）による（当時の）ドイツ語での命名 "der flüssige Krystall"{% cite Lehmann1900 %}の訳語である．液晶は「中間相」や "mesophase" とも称される．
 
 ### 代表的な液晶材料
-MBBAが有名である．これは，<i>N</i>-(<i>p</i>-methoxybenzylidene)-<i>p&#x2032;</i>-<i>n</i>-butylaniline（エヌ-(パラ-メトキシベンジリデン)-パラプライム-ノルマル-ブチルアニリン）の略称であり，最初に合成された室温ネマチック液晶である{% cite Kelker1969 %}．Schiff（シッフ）塩基であるため，水分が存在するとanisaldehyde（アニスアルデヒド）と<i>p</i>-<i>n</i>-butylaniline（パラ-ノルマル-ブチルアニリン）に加水分解される．さらに，<i>p</i>-<i>n</i>-butylanilineは酸化されやすく，光や酸素の存在下で重合が進行し，試料の変色を引き起こす．実際にMBBAは，加水分解や酸化で生じた不純物の影響により黄変し，相転移温度も低下しがちである．特に液晶ディスプレイでは，液晶試料が光照射に晒され，しかも電場印加の際に電極表面で電解酸化が生じるので，化学的に不安定なMBBAには過酷な環境である．MBBAは<i>p</i>-<i>n</i>-butylanilineと<i>p</i>-<i>n</i>-butylanilineを濃縮することで得られる{% cite Kelker1969 %}．『Dr.STONE SCIENCE FUTURE』（S4 E34 "COUNTDOWN"）{% cite DrSTONE_S4_2025 %}で千空は「エヌ-ブチルアニリン」を出発物質として挙げているが，この物質が<i>p</i>-<i>n</i>-butylanilineを指すならば，彼らはMBBAの合成を試みたと解釈される．そして，トルエンも（おそらく果敢にもanisaldehydeを合成するために）用いることで，MBBAと思しき粘稠で黄色味がかった液晶試料を得ている．
+MBBAが有名である．これは，<i>N</i>-(<i>p</i>-methoxybenzylidene)-<i>p&#x2032;</i>-<i>n</i>-butylaniline（エヌ-(パラ-メトキシベンジリデン)-パラプライム-ノルマル-ブチルアニリン）の略称であり，最初に合成された室温ネマチック液晶である{% cite Kelker1969 %}．Schiff（シッフ）塩基であるため，水分が存在するとanisaldehyde（アニスアルデヒド）と<i>p</i>-<i>n</i>-butylaniline（パラ-ノルマル-ブチルアニリン）に加水分解される．さらに，<i>p</i>-<i>n</i>-butylanilineは酸化されやすく，光や酸素の存在下で重合が進行し，試料の変色を引き起こす．実際にMBBAは，加水分解や酸化で生じた不純物の影響により黄変し，相転移温度も低下しがちである．特に液晶ディスプレイでは，液晶試料が光照射に晒され，しかも電場印加の際に電極表面で電解酸化が生じるので，化学的に不安定なMBBAには過酷な環境である．MBBAは<i>p</i>-<i>n</i>-butylanilineと<i>p</i>-<i>n</i>-butylanilineを濃縮することで得られる{% cite Kelker1969 %}．『Dr.STONE SCIENCE FUTURE』（S4 E34 "COUNTDOWN"）{% cite DrSTONE_S4_2025 %}で千空は「エヌ-ブチルアニリン」を出発物質として挙げているが，この物質が<i>p</i>-<i>n</i>-butylanilineを指すならば，彼らはMBBAの合成を試みたと解釈される．そして，トルエンも（おそらくanisaldehydeを合成するために）用いることで，MBBAと思しき粘稠で黄色味がかった液晶試料を得ている．
 
 ## 配向技術
 配向のメカニズムは不明な点も多いが，有力とされる候補を3つ挙げる{% cite 古川顕治1994日本化学会 廣嶋綱紀2024日本液晶学会 %}．
@@ -43,6 +43,8 @@ DSM方式{% cite Heilmeier1968ApplPhysLett %}
 TN方式{% cite Fergason1971US3731986 Schadt1971ApplPhysLett %}
 
 VA方式{% cite Schiekel1971ApplPhysLett %}
+
+IPS方式{% cite Baur1996US5576867A %}
 
 セグメント方式とドットマトリックス方式
 
