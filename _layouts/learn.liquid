@@ -32,40 +32,29 @@ layout: default
 <script>
 window.addEventListener("load", () => {
   const progressBar = document.getElementById("progress");
+  const references = document.querySelector(".learn-references");
 
-  if (!progressBar) {
-    console.log("[learn progress] progress bar not found");
-    return;
+  if (!progressBar || !references) return;
+
+  function updateLearnProgress() {
+    const scrollY =
+      window.pageYOffset || document.documentElement.scrollTop || 0;
+
+    const referencesTop =
+      references.getBoundingClientRect().top + scrollY;
+
+    const distanceToReferences = Math.max(
+      referencesTop - window.innerHeight,
+      0
+    );
+
+    progressBar.max = distanceToReferences;
+    progressBar.value = Math.min(scrollY, distanceToReferences);
   }
 
-  console.log("[learn progress] initial max:", progressBar.max);
-  console.log("[learn progress] initial value:", progressBar.value);
+  updateLearnProgress();
 
-  let lastValue = progressBar.value;
-  let lastMax = progressBar.max;
-
-  setInterval(() => {
-    if (progressBar.value !== lastValue) {
-      console.log(
-        "[learn progress] value:",
-        lastValue,
-        "→",
-        progressBar.value,
-        "scrollY:",
-        window.scrollY
-      );
-      lastValue = progressBar.value;
-    }
-
-    if (progressBar.max !== lastMax) {
-      console.log(
-        "[learn progress] max:",
-        lastMax,
-        "→",
-        progressBar.max
-      );
-      lastMax = progressBar.max;
-    }
-  }, 100);
+  document.addEventListener("scroll", updateLearnProgress);
+  window.addEventListener("resize", updateLearnProgress);
 });
 </script>
