@@ -33,9 +33,39 @@ layout: default
 window.addEventListener("load", () => {
   const progressBar = document.getElementById("progress");
 
-  console.log("[learn progress] progress bar:", progressBar);
-  console.log("[learn progress] references:", document.querySelector(".learn-references"));
-  console.log("[learn progress] current value:", progressBar?.value);
-  console.log("[learn progress] max:", progressBar?.max);
+  if (!progressBar) {
+    console.log("[learn progress] progress bar not found");
+    return;
+  }
+
+  console.log("[learn progress] initial max:", progressBar.max);
+  console.log("[learn progress] initial value:", progressBar.value);
+
+  let lastValue = progressBar.value;
+  let lastMax = progressBar.max;
+
+  setInterval(() => {
+    if (progressBar.value !== lastValue) {
+      console.log(
+        "[learn progress] value:",
+        lastValue,
+        "→",
+        progressBar.value,
+        "scrollY:",
+        window.scrollY
+      );
+      lastValue = progressBar.value;
+    }
+
+    if (progressBar.max !== lastMax) {
+      console.log(
+        "[learn progress] max:",
+        lastMax,
+        "→",
+        progressBar.max
+      );
+      lastMax = progressBar.max;
+    }
+  }, 100);
 });
 </script>
