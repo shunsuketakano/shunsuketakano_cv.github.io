@@ -316,3 +316,15 @@ html[data-theme="dark"] .learn-content blockquote {
     white-space: nowrap;
   }
 }
+
+/* Show bibliography numbers on mobile */
+@media (max-width: 575.98px) {
+  .learn-content .learn-references .bibliography {
+    list-style-type: decimal !important;
+    padding-left: 2rem !important;
+  }
+
+  .learn-content .learn-references .bibliography li {
+    display: list-item !important;
+  }
+}
