@@ -9,3 +9,5 @@ related_publications: true
 ---
 
 周波数応答　配向分極　イオン分極　電子分極　因果律（Kramers-Kronig関係式）
+
+水晶振動では，SiO4の四面体構造を保ったままSi-O-Siの角度が変わる{% cite Aoyagi2015ApplPhysLett %}．
