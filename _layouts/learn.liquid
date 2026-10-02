@@ -18,5 +18,24 @@ layout: default
         {% bibliography --group_by none --cited_in_order %}
       </div>
     {% endif %}
+    {% if page.related_publications %}
+      <div class="learn-references">
+        <h2>References</h2>
+        <div class="publications">
+          {% bibliography --group_by none --cited_in_order %}
+        </div>
+      </div>
+    {% endif %}
   </article>
 </div>
+
+<script>
+window.addEventListener("load", () => {
+  const progressBar = document.getElementById("progress");
+
+  console.log("[learn progress] progress bar:", progressBar);
+  console.log("[learn progress] references:", document.querySelector(".learn-references"));
+  console.log("[learn progress] current value:", progressBar?.value);
+  console.log("[learn progress] max:", progressBar?.max);
+});
+</script>
