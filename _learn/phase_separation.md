@@ -1,12 +1,17 @@
 ---
-layout: page
+layout: learn
 title: 相分離
 description: 2種の異なる液相に分かれる現象の仕組み
 img: assets/img/12.jpg
 importance: 1
 category: ソフトマター全般編
 related_publications: true
+learn_page: true
 ---
+
+答えるべき疑問：2つの滴が時間経過とともにひとつの丸い滴になった．これは界面張力が存在するから固体ではなく液体である．
+
+合一　界面張力は固体表面上にも存在する　（短時間で）丸い滴になるのは中身が流動的だから．
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
