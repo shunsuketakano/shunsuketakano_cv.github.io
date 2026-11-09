@@ -14,7 +14,7 @@ course_id: kagomekagome2026
 
 Read the QR code below to start playing kagomekagome!
 
-<a href="[https://example.com](https://shunsuketakano.github.io/kagomekagome_lite/voici/render/diagonal_flop.html)" target="_blank" rel="noopener noreferrer">
+<a href="https://shunsuketakano.github.io/kagomekagome_lite/voici/render/diagonal_flop.html" target="_blank" rel="noopener noreferrer">
   <img
     src="{{ '/assets/img/outreach/kagomekagome_qr-code2.png' | relative_url }}"
     alt="Event photograph"
