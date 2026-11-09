@@ -4,8 +4,10 @@ title: 「結び目の科学」が明らかにする新しい自然観－世界�
 description: 第20回 広島大学ホームカミングデー
 主催者: 広島大学 持続可能性に寄与するキラルノット超物質国際研究所（WPI-SKCM²）
 year: 2026
+start_date: 2026-11-07
+end_date: 2026-11-07
 location: 広島大学 Science Knot 1階
-time: 11/07 (Mon.) 10:30–16:00
+time: "10:30–16:00"
 role: SKCM² outreach staff member
 course_id: skcm2_homecoming2026
 ---
