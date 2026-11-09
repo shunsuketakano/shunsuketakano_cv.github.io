@@ -42,7 +42,7 @@
               <div class="course-description">
                 {{ event.description | markdownify }}
                 {% if event.role %}
-                  <span>Role: {{ event.role }}</span>
+                  <span style="display: block;">Role: {{ event.role }}</span>
                 {% endif %}
               </div>
             {% elsif event.role %}
