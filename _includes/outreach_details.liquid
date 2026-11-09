@@ -19,6 +19,10 @@
               {% if event.location %}
                 <span class="course-instructor">{{ event.location }}</span>
               {% endif %}
+              
+              {% if event.role %}
+                <span>{{ event.role }}</span>
+              {% endif %}
             </div>
 
             {% if event.description %}
