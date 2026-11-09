@@ -4,19 +4,12 @@ layout: course
 <div class="course-meta">
   {% if page.start_date %}
     <p>
+      Date:
       {{ page.start_date | date: "%d %b %Y (%a)" }}
       {% if page.end_date and page.end_date != page.start_date %}
         – {{ page.end_date | date: "%d %b %Y (%a)" }}
       {% endif %}
     </p>
-  {% endif %}
-
-  {% if page.time %}
-    <p>{{ page.time }}</p>
-  {% endif %}
-
-  {% if page.location %}
-    <p>{{ page.location }}</p>
   {% endif %}
 
   {% if page.role %}
