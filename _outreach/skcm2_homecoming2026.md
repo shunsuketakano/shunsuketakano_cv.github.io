@@ -18,5 +18,5 @@ Worked as a SKCM² outreach staff member.
 This course provides a comprehensive introduction to data science principles and practices. Students will:
 
 - リモネンの香りとキラリティ
-- キラル結晶と液晶の顕微鏡観察
+- キラル結晶と液晶の旋光性と顕微鏡観察
 - バブルリング
