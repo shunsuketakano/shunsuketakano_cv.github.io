@@ -6,6 +6,7 @@ description: 第20回 広島大学ホームカミングデー
 year: 2026
 location: 広島大学 Science Knot 1階
 time: 11/07 (Mon.) 10:30–16:00
+role: SKCM² outreach staff member
 course_id: skcm2_homecoming2026
 ---
 
