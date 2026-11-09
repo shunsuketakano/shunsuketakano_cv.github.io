@@ -2,12 +2,10 @@
 layout: page
 permalink: /outreach/
 title: Public Outreach
-description: Course materials, schedules, and resources for classes taught.
+description: Outreach activities and public engagement.
 nav_order: 2
 calendar: true
 ---
-
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
 
 {% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Tokyo' %}
 
