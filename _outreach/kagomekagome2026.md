@@ -2,7 +2,7 @@
 layout: outreach
 title: kagomekagome
 description: グラフトポロジーの局所変形を学ぶゲーム
-Developper: E. J. Dresselhaus, Shunsuke Takano
+developper: E. J. Dresselhaus, Shunsuke Takano
 year: 2026
 start_date: 2026-11-05
 end_date: 2026-11-05
