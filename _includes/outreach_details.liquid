@@ -41,10 +41,12 @@
             {% if event.description %}
               <div class="course-description">
                 {{ event.description | markdownify }}
+                {% if event.role %}
+                  <span>Role: {{ event.role }}</span>
+                {% endif %}
               </div>
-            {% endif %}
-            {% if event.role %}
-              <div class="course-description">
+            {% elsif event.role %}
+              <div>
                 Role: {{ event.role }}
               </div>
             {% endif %}
