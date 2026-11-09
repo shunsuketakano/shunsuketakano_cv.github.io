@@ -13,6 +13,13 @@ layout: course
   {% endif %}
 
   {% if page.role %}
+    <p>Organiser: {{ page.organiser }}</p>
+  {% endif %}
+  {% if page.role %}
+    <p>Developper: {{ page.developper }}</p>
+  {% endif %}
+
+  {% if page.role %}
     <p>Role: {{ page.role }}</p>
   {% endif %}
 </div>
