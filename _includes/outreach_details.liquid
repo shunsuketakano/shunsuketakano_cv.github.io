@@ -28,6 +28,14 @@
               {% if event.location %}
                 <span class="course-instructor">{{ event.location }}</span>
               {% endif %}
+
+              {% if event.location %}
+                <span class="course-instructor">, Organiser: {{ event.organiser }}</span>
+              {% endif %}
+
+              {% if event.location %}
+                <span class="course-instructor">, Developper: {{ event.developper }}</span>
+              {% endif %}
             </div>
 
             {% if event.topic %}
