@@ -5,7 +5,7 @@ description: 第20回 広島大学ホームカミングデー
 主催者: 広島大学 持続可能性に寄与するキラルノット超物質国際研究所（WPI-SKCM²）
 year: 2026
 location: 広島大学 Science Knot 1階
-time: 11/07 (Mon.) 10：30–16：00
+time: 11/07 (Mon.) 10:30–16:00
 course_id: skcm2_homecoming2026
 schedule:
   - day: 1
