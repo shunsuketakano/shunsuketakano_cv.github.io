@@ -1,6 +1,6 @@
 ---
 layout: outreach
-title: kagomekagome
+title: 香りと光のキラリティ
 description: 日本化学会中国四国支部 おもしろワクワク化学の世界'26広島化学展
 organiser: 広島大学 持続可能性に寄与するキラルノット超物質国際研究所（WPI-SKCM²）
 year: 2026
