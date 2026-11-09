@@ -12,6 +12,15 @@
             </h3>
 
             <div class="course-meta">
+              {% if event.start_date %}
+                <span class="course-term">
+                  {{ event.start_date | date: "%d %b %Y" }}
+                  {% if event.end_date and event.end_date != event.start_date %}
+                    – {{ event.end_date | date: "%d %b %Y" }}
+                  {% endif %}
+                </span>
+              {% endif %}
+
               {% if event.time %}
                 <span class="course-term">{{ event.time }}</span>
               {% endif %}
@@ -19,11 +28,19 @@
               {% if event.location %}
                 <span class="course-instructor">{{ event.location }}</span>
               {% endif %}
-              
+
               {% if event.role %}
-                <span>役職：{{ event.role }}</span>
+                <span>Role: {{ event.role }}</span>
               {% endif %}
             </div>
+
+            {% if event.topic %}
+              <div class="course-description">
+                {% for topic in event.topic %}
+                  <span>{{ topic }}</span>{% unless forloop.last %} · {% endunless %}
+                {% endfor %}
+              </div>
+            {% endif %}
 
             {% if event.description %}
               <div class="course-description">
