@@ -2,7 +2,7 @@
 layout: outreach
 title: 「結び目の科学」が明らかにする新しい自然観－世界トップレベルの国際研究拠点WPI-SKCM²へようこそ！
 description: 第20回 広島大学ホームカミングデー
-Organiser: 広島大学 持続可能性に寄与するキラルノット超物質国際研究所（WPI-SKCM²）
+organiser: 広島大学 持続可能性に寄与するキラルノット超物質国際研究所（WPI-SKCM²）
 year: 2026
 start_date: 2026-11-07
 end_date: 2026-11-07
