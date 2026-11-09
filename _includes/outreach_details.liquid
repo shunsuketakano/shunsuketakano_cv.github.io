@@ -1,1 +1,36 @@
+{% if site.outreach %}
+  <div class="courses">
+    {% assign events_by_year = site.outreach | sort: 'year' | reverse | group_by: 'year' %}
+    {% for year_group in events_by_year %}
+      <h2 class="year">{{ year_group.name }}</h2>
+      <div class="course-list">
+        {% assign year_events = year_group.items | sort: 'time' %}
+        {% for event in year_events %}
+          <div class="course-item">
+            <h3 class="course-title">
+              <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
+            </h3>
 
+            <div class="course-meta">
+              {% if event.time %}
+                <span class="course-term">{{ event.time }}</span>
+              {% endif %}
+
+              {% if event.location %}
+                <span class="course-instructor">{{ event.location }}</span>
+              {% endif %}
+            </div>
+
+            {% if event.description %}
+              <div class="course-description">
+                {{ event.description | markdownify }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No outreach events available yet.</p>
+{% endif %}
