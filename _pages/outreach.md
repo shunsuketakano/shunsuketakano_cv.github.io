@@ -9,4 +9,4 @@ calendar: true
 
 {% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Tokyo' %}
 
-{% include outreach_list.liquid %}
+{% include outreach_details.liquid %}
