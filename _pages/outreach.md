@@ -27,4 +27,4 @@ outreach count: {{ site.outreach | size }}
 {% endfor %}
 </pre>
 
-{% include courses.liquid %}
+{% include outreach_list.liquid %}
