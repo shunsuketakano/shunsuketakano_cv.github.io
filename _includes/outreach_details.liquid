@@ -4,7 +4,7 @@
     {% for year_group in events_by_year %}
       <h2 class="year">{{ year_group.name }}</h2>
       <div class="course-list">
-        {% assign year_events = year_group.items | sort: 'time' %}
+        {% assign year_events = year_group.items | sort: 'start_date' | reverse %}
         {% for event in year_events %}
           <div class="course-item">
             <h3 class="course-title">
