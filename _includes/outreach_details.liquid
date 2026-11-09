@@ -30,11 +30,15 @@
               {% endif %}
 
               {% if event.organiser %}
-                <span class="course-instructor">, [Organiser] {{ event.organiser }}</span>
+                <span class="course-instructor"><br>[Organiser] {{ event.organiser }}</span>
               {% endif %}
 
               {% if event.developper %}
-                <span class="course-instructor">, [Developper] {{ event.developper }}</span>
+                <span class="course-instructor"><br>[Developper] {{ event.developper }}</span>
+              {% endif %}
+
+              {% if event.role %}
+                <span class="course-instructor"><br>[Role] {{ event.role }}</span>
               {% endif %}
             </div>
 
@@ -49,13 +53,6 @@
             {% if event.description %}
               <div class="course-description">
                 {{ event.description | markdownify }}
-                {% if event.role %}
-                  <span style="display: block;">[Role] {{ event.role }}</span>
-                {% endif %}
-              </div>
-            {% elsif event.role %}
-              <div>
-                [Role] {{ event.role }}
               </div>
             {% endif %}
             <br>
