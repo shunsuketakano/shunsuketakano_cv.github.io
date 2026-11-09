@@ -7,20 +7,11 @@ year: 2026
 location: 広島大学 Science Knot 1階
 time: 11/07 (Mon.) 10:30–16:00
 course_id: skcm2_homecoming2026
-schedule:
-  - day: 1
-    date: 11/07
-    topic: リモネンの香りとキラリティ，キラル結晶と液晶の顕微鏡観察，バブルリング
-    description: 同上
-    materials:
-      - name: Syllabus
-        url: /assets/pdf/example_pdf.pdf
-      - name: Slides
-        url: /assets/pdf/example_pdf.pdf
 ---
 
 ## Overview
 
+Worked as a SKCM² outreach staff member.
 This course provides a comprehensive introduction to data science principles and practices. Students will:
 
 - リモネンの香りとキラリティ
