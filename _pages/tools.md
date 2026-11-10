@@ -12,7 +12,7 @@ A collection of web-based tools and utilities developed for research and scienti
   {% assign sorted_tools = site.tools | sort: "importance" %}
   {% for tool in sorted_tools %}
   <div class="tool-card">
-    <a href="{{ tool.url }}" target="_blank" rel="noopener">
+    <a href="{{ tool.external_url }}" target="_blank" rel="noopener">
       <div class="tool-card-body">
         <span class="tool-category">{{ tool.category }}</span>
         <h3>{{ tool.title }}</h3>
