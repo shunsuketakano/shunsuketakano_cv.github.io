@@ -15,7 +15,8 @@ course_id: skcm2_homecoming2026
 ## Overview
 
 Worked as a SKCM² outreach staff member.
-This course provides a comprehensive introduction to data science principles and practices. Students will:
+
+I led one of the two sections, which aimed to introduce chirality to the general public through hands-on experiences engaging their senses of smell and sight. The following demonstrations were presented:
 
 - リモネンの香りとキラリティ
 - キラル結晶と液晶の旋光性と顕微鏡観察
