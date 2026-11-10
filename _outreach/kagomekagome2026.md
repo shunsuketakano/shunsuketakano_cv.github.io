@@ -16,6 +16,6 @@ This HTML-based game allows players to learn how to randomise a honeycomb graph 
 
 Read or click on the QR code below to start playing kagomekagome!
 
-kagomekagome has been unveiled at the SKCM2 seminar given by Prof. Dresselhaus.
-
 <a href="https://shunsuketakano.github.io/kagomekagome_lite/voici/render/diagonal_flop.html" target="_blank" rel="noopener noreferrer"><img src="/shunsuketakano_cv.github.io/assets/img/outreach/kagomekagome_qr-code2.png" alt="QR code for kagomekagome" style="width: 100%; max-width: 300px; height: auto;"></a>
+
+kagomekagome was first presented at the [SKCM2 seminar](https://wpi-skcm2.hiroshima-u.ac.jp/seminars/elizabeth-dresselhaus-wpi-skcm²-hiroshima-university/) given by Prof. Dresselhaus.
