@@ -213,6 +213,8 @@ collections:
     output: true
   learn:
     output: true
+  tools:
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
