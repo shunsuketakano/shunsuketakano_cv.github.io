@@ -12,7 +12,7 @@ course_id: kagomekagome2026
 
 ## Overview
 
-This HTML-based game allows players to learn how to randomise a honeycomb graph through the “diagonal flip” operation. This operation is described in [[Dresselhaus *et al.*, Phys. Rev. B **112**, 064202 (2025)]](https://doi.org/10.1103/q8vz-b83f). The score increases with the diversity of generated polygons and is calculated using Shannon entropy.
+This HTML-based game allows players to learn how to randomise a honeycomb graph through the “diagonal flip” operation. This operation is described in [[Dresselhaus *et al.*, Phys. Rev. B **112**, 064202 (2025)](https://doi.org/10.1103/q8vz-b83f)]. The score increases with the diversity of generated polygons and is calculated using Shannon entropy.
 
 Read or click on the QR code below to start playing kagomekagome!
 
