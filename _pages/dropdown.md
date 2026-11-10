@@ -12,4 +12,6 @@ children:
     permalink: /blog/
   - title: repositories
     permalink: /repositories/
+  - title: tools
+    permalink: /tools/
 ---
