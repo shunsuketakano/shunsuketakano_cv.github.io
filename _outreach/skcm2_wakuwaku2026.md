@@ -13,6 +13,8 @@ course_id: wakuwaku2026
 
 ## Overview
 
-Worked as SKCM² support staff. Read or click on the QR code below to observe the interactive 3D molecular models!
+Worked as SKCM² support staff. 
+
+Read or click on the QR code below to observe the interactive 3D molecular models!
 
 <a href="https://shunsuketakano.github.io/wakuwaku-limonene/" target="_blank" rel="noopener noreferrer"><img src="/shunsuketakano_cv.github.io/assets/img/outreach/qr_wakuwaku_limonene.png" alt="QR code for wakuwaku" style="width: 100%; max-width: 300px; height: auto;"></a>
