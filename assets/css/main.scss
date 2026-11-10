@@ -328,3 +328,69 @@ html[data-theme="dark"] .learn-content blockquote {
     display: list-item !important;
   }
 }
+
+/* ======================================================== */
+/* Tools catalogue                                          */
+/* ======================================================== */
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.tool-card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.12);
+  border-color: var(--global-theme-color);
+}
+
+.tool-card > a {
+  display: block;
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.tool-card-body {
+  padding: 1.5rem;
+}
+
+.tool-category {
+  font-size: 0.8rem;
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+
+.tool-card h3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.tool-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.tool-launch {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+}
+
+.tool-source {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 0.85rem;
+}
