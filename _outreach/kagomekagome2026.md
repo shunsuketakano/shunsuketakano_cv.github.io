@@ -12,7 +12,7 @@ course_id: kagomekagome2026
 
 ## Overview
 
-kagomekagome was first presented at the [SKCM2 seminar](https://wpi-skcm2.hiroshima-u.ac.jp/seminars/elizabeth-dresselhaus-wpi-skcm²-hiroshima-university/) given by Prof. Dresselhaus on 05 Nov.
+kagomekagome was first presented at the [SKCM² seminar](https://wpi-skcm2.hiroshima-u.ac.jp/seminars/elizabeth-dresselhaus-wpi-skcm²-hiroshima-university/) given by Prof. Dresselhaus on 05 Nov.
 
 This HTML-based game allows players to learn how to randomise a honeycomb graph through the “diagonal flip” operation. This operation is described in [[Dresselhaus *et al.*, Phys. Rev. B **112**, 064202 (2025)](https://doi.org/10.1103/q8vz-b83f)]. The score increases with the diversity of generated polygons and is calculated using Shannon entropy.
 
